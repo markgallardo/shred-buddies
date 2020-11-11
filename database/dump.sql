@@ -215,6 +215,10 @@ COPY public.event ("eventId", description, "resortId", "profileId", "startDate",
 --
 
 COPY public.profile ("profileId", name, email, skill, "imgUrl", description) FROM stdin;
+1	test	test	test	test	test
+2	test	test	test	test	test
+3	test	test	test	test	test
+4	test	test	test	test	test
 \.
 
 
@@ -237,7 +241,7 @@ SELECT pg_catalog.setval('public."event_eventId_seq"', 1, false);
 -- Name: profile_profileId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."profile_profileId_seq"', 1, false);
+SELECT pg_catalog.setval('public."profile_profileId_seq"', 4, true);
 
 
 --
