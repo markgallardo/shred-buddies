@@ -1,0 +1,21 @@
+header {
+  height: 5rem;
+  background: #9EC5AB;
+}
+
+.head-title {
+  font-family: 'Rock Salt', cursive;
+  font-weight: bolder;
+  color: #1b4332;
+}
+
+
+.fa-snowboarding {
+  color: #1b4332;
+  font-size: 40px;
+}
+.fa-bell {
+  color: red;
+  font-size: 40px;
+
+}
