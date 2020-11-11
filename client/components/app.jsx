@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './header';
+import Profile from './profile';
 
 export default class App extends React.Component {
 
@@ -7,6 +8,7 @@ export default class App extends React.Component {
     return (
       <>
         <Header />
+        <Profile />
       </>
     );
   }
