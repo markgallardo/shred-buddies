@@ -221,6 +221,7 @@ COPY public.profile ("profileId", name, email, skill, "imgUrl", description) FRO
 4	test	test	test	test	test
 5	mark	someemail	beginner	https://static.wikia.nocookie.net/starwars/images/4/48/Chewbacca_TLJ.png/revision/latest?cb=20190830144754	i like bunny slope
 6	mark	someemail	beginner	https://static.wikia.nocookie.net/starwars/images/4/48/Chewbacca_TLJ.png/revision/latest?cb=20190830144754	i like bunny slope
+8	jason	jason25@gmail.com	intermediate	https://image.cnbcfm.com/api/v1/image/101524695-457220551.jpg?v=1395781183&w=1400&h=950	I also like bunny slopes
 \.
 
 
@@ -229,6 +230,8 @@ COPY public.profile ("profileId", name, email, skill, "imgUrl", description) FRO
 --
 
 COPY public.resort ("resortId", name, address, description, "imgUrl") FROM stdin;
+2	Bear Mountain	43101 Goldmine Dr, Big Bear Lake, CA 92315	Bear Mountain, formerly Goldmine Mountain, is a ski area in Southern California, United States. When its neighbor, Snow Summit, bought Bear Mountain in 2002, the new entity, Big Bear Mountain Resorts, comprised the two, with a single lift ticket usable at both.	/images/big-bear.jpg
+1	Mammoth Mountain	10001 Minaret Rd, Mammoth Lakes, CA 93546	Mammoth Mountain Ski Area is a large ski resort in the western United States, located in eastern California along the east side of the Sierra Nevada mountain range in the Inyo National Forest. Mammoth has more than 3,500 acres of ski-able terrain, serviced by 28 lift.	/images/mammoth-ski.jpg
 \.
 
 
@@ -243,14 +246,14 @@ SELECT pg_catalog.setval('public."event_eventId_seq"', 1, false);
 -- Name: profile_profileId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."profile_profileId_seq"', 6, true);
+SELECT pg_catalog.setval('public."profile_profileId_seq"', 8, true);
 
 
 --
 -- Name: resort_resortId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."resort_resortId_seq"', 1, false);
+SELECT pg_catalog.setval('public."resort_resortId_seq"', 2, true);
 
 
 --
