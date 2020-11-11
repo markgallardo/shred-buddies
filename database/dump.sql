@@ -219,6 +219,8 @@ COPY public.profile ("profileId", name, email, skill, "imgUrl", description) FRO
 2	test	test	test	test	test
 3	test	test	test	test	test
 4	test	test	test	test	test
+5	mark	someemail	beginner	https://static.wikia.nocookie.net/starwars/images/4/48/Chewbacca_TLJ.png/revision/latest?cb=20190830144754	i like bunny slope
+6	mark	someemail	beginner	https://static.wikia.nocookie.net/starwars/images/4/48/Chewbacca_TLJ.png/revision/latest?cb=20190830144754	i like bunny slope
 \.
 
 
@@ -241,7 +243,7 @@ SELECT pg_catalog.setval('public."event_eventId_seq"', 1, false);
 -- Name: profile_profileId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."profile_profileId_seq"', 4, true);
+SELECT pg_catalog.setval('public."profile_profileId_seq"', 6, true);
 
 
 --
