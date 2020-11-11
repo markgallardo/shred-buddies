@@ -36,3 +36,12 @@ h2 {
   color: white;
   border-radius: 5px;
 }
+
+.img-list{
+  height: 75px;
+  width: 70px;
+}
+
+.p-resortList{
+font-size: 15px;
+}
