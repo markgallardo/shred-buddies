@@ -19,3 +19,11 @@ header {
   font-size: 40px;
 
 }
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.profile-pic {
+  max-width: 180px;
+}
