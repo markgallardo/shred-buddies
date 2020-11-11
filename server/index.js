@@ -20,6 +20,16 @@ app.get('/api/health-check', (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.get('/api/resort', (req, res, next) => {
+  const sql = `
+    select *
+    from resort
+    `;
+  db.query(sql)
+    .then(result => res.status(200).json(result.rows[0]))
+    .catch(err => next(err));
+});
+
 app.get('/api/profile', (req, res, next) => {
   const select = `
         select *
