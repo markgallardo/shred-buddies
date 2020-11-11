@@ -27,12 +27,34 @@ h2 {
 .profile-pic {
   max-width: 180px;
 }
+
+
+.create-header {
+  font-family: 'Rock Salt', cursive;
+   color: #1b4332;
+   font-size: 40px;
+}
+
+.create-form {
+  background: lightgray;
+  height: 1000px;
+   font-family: 'Roboto', sans-serif;
+}
+
+.btn-detail{
+  background-color: #1B4332;
+  color: white;
+  border-radius: 10px;
+  width: 250px;
+  height: 40px;
+   font-family: 'Roboto', sans-serif;
+
+
+
 .img-detail{
   height: 250px;
   width: 250px;
 }
-.btn-detail{
-  background-color: #1B4332;
-  color: white;
-  border-radius: 5px;
+
+
 }
