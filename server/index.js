@@ -20,6 +20,29 @@ app.get('/api/health-check', (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.get('/api/profile', (req, res, next) => {
+  const select = `
+        select *
+        from profile
+  `;
+  db.query(select)
+    .then(result => res.status(200).json(result.rows[0]))
+    .catch(err => next(err));
+});
+
+app.post('/api/profile', (req, res, next) => {
+  if (!req.body.name && !req.body.email && !req.body.skill && !req.body.imgUrl && !req.body.description) throw new ClientError(' Name , email, skill, imgUrl,description must be fill out', 400);
+  const insert = `
+        insert into "profile"("name", "email","skill", "imgUrl", "description")
+        values ($1,$2,$3,$4,$5)
+        returning *
+ `;
+  const values = [req.body.name, req.body.email, req.body.skill, req.body.imgUrl, req.body.description];
+  db.query(insert, values)
+    .then(result => res.status(200).json(result.rows[0]))
+    .catch(err => next(err));
+});
+
 app.use('/api', (req, res, next) => {
   next(new ClientError(`cannot ${req.method} ${req.originalUrl}`, 404));
 });
