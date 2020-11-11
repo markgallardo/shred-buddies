@@ -28,6 +28,7 @@ h2 {
   max-width: 180px;
 }
 
+
 .create-header {
   font-family: 'Rock Salt', cursive;
    color: #1b4332;
@@ -47,6 +48,13 @@ h2 {
   width: 250px;
   height: 40px;
    font-family: 'Roboto', sans-serif;
+
+
+
+.img-detail{
+  height: 250px;
+  width: 250px;
+}
 
 
 }
