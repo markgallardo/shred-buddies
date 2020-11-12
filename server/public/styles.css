@@ -36,9 +36,9 @@ h2 {
    font-size: 40px;
 }
 
-.create-form {
+.create-form, .add-event {
   background: lightgray;
-  height: 680px;
+  height: 660px;
    font-family: 'Roboto', sans-serif;
 }
 
@@ -75,4 +75,12 @@ font-size: 15px;
 
 .event-img {
   filter: brightness(50%);
+}
+
+.add-event {
+  font-family: 'Roboto', sans-serif;
+}
+
+.start-input, .end-input {
+  width:170px;
 }
