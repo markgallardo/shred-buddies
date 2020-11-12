@@ -69,3 +69,10 @@ h2 {
 font-size: 15px;
 }
 
+.nav {
+  font-family: 'Roboto', sans-serif;
+}
+
+.event-img {
+  filter: brightness(50%);
+}
