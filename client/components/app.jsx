@@ -1,9 +1,12 @@
 
+
+
 import React from 'react';
 import CreateProfile from './create-profile';
 // import Header from './header';
 // import Profile from './profile';
 // import RecommendentResorDetail from './recommendent-resort-detail';
+import ResortList from './resort-list';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -55,10 +58,12 @@ export default class App extends React.Component {
         <CreateProfile setView ={this.setView} createProfile={this.createProfile} />
         {/* <Header />
         <Profile/>
-        <RecommendentResorDetail/> */}
+        <RecommendentResorDetail/> */
+        <ResortList/>
       </>
     );
   }
 }
+
 
 
