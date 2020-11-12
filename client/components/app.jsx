@@ -55,7 +55,9 @@ export default class App extends React.Component {
     // }
     return (
       <>
+
         <Header />
+
         <AddEvent />
         {/* <EventList /> */}
         {/* <EventListItem setView ={this.setView} />
@@ -63,6 +65,7 @@ export default class App extends React.Component {
         <Profile/>
         <RecommendentResorDetail/>
         <ResortList/> */}
+
       </>
     );
   }
