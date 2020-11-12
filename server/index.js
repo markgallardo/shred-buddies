@@ -26,7 +26,7 @@ app.get('/api/resort', (req, res, next) => {
     from resort
     `;
   db.query(sql)
-    .then(result => res.status(200).json(result.rows[0]))
+    .then(result => res.status(200).json(result.rows))
     .catch(err => next(err));
 });
 
@@ -51,6 +51,33 @@ app.post('/api/profile', (req, res, next) => {
   db.query(insert, values)
     .then(result => res.status(200).json(result.rows[0]))
     .catch(err => next(err));
+});
+
+app.get('/api/event', (req, res, next) => {
+  const select = `
+          select *
+          from event
+  `;
+  db.query(select)
+    .then(result => res.status(200).json(result.rows))
+    .catch(err => next(err));
+});
+
+app.get('/api/event/:eventId', (req, res, next) => {
+  const eventId = parseInt(req.params.eventId, 10);
+  const select = `
+        select *
+        from "event"
+        where "eventId" = $1
+  `;
+  db.query(select, [eventId])
+    .then(result => {
+      if (!result.rows[0]) {
+        next(new ClientError(`cannot find eventId of ${eventId}`, 404));
+      } else {
+        res.status(200).json(result.rows[0]);
+      }
+    });
 });
 
 app.use('/api', (req, res, next) => {
