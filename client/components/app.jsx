@@ -1,11 +1,12 @@
 import React from 'react';
-import EventList from './event-list';
+// import EventList from './event-list';
 // import EventListItem from './event-list-item';
+import AddEvent from './add-event';
 // import CreateProfile from './create-profile';
 import Header from './header';
 // import Profile from './profile';
 // import RecommendentResorDetail from './recommendent-resort-detail';
-import ResortList from './resort-list';
+// import ResortList from './resort-list';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -56,14 +57,15 @@ export default class App extends React.Component {
       <>
 
         <Header />
-        <EventList />
-        {/* <EventListItem setView ={this.setView} /> */}
-        {/* <CreateProfile setView ={this.setView} createProfile={this.createProfile} /> */}
-        {/* <Header />
 
+        <AddEvent />
+        {/* <EventList /> */}
+        {/* <EventListItem setView ={this.setView} />
+         <CreateProfile setView ={this.setView} createProfile={this.createProfile} />
         <Profile/>
-        <RecommendentResorDetail/>  */}
-        <ResortList/>
+        <RecommendentResorDetail/>
+        <ResortList/> */}
+
       </>
     );
   }
