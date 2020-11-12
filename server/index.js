@@ -79,7 +79,29 @@ app.get('/api/event/:eventId', (req, res, next) => {
       }
     });
 });
+app.get('/api/events', (req, res, next) => {
 
+  // const eventId = parseInt(req.params.eventId, 10);
+  const sql = `
+  select "e"."eventId",
+    "r"."imgUrl" as "resort image",
+    "r"."name"as "resort name",
+    "p"."name" as "profile name",
+    "e"."description" as "event description"
+    from "event" as "e"
+    join "resort" as "r" using ("resortId")
+    join "profile" as "p" using ("profileId")
+
+    `;
+
+  // const values = [eventId];
+
+  db.query(sql)
+    .then(result => {
+      res.status(200).json(result.rows);
+    });
+
+});
 app.post('/api/event', (req, res, next) => {
   if (!req.body.resortId && !req.body.startDate && !req.body.endDate && !req.body.profileId && !req.body.description) throw new ClientError(' resortId , startDate, endDate, profileId, description must be fill out', 400);
   const insert = `
