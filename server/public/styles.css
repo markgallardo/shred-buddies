@@ -37,7 +37,7 @@ h2 {
 
 .create-form {
   background: lightgray;
-  height: 1000px;
+  height: 680px;
    font-family: 'Roboto', sans-serif;
 }
 
@@ -49,12 +49,9 @@ h2 {
   height: 40px;
    font-family: 'Roboto', sans-serif;
 
-
+}
 
 .img-detail{
   height: 250px;
   width: 250px;
-}
-
-
 }
