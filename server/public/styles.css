@@ -1,3 +1,4 @@
+
 header {
   height: 5rem;
   background: #9EC5AB;
@@ -55,3 +56,16 @@ h2 {
   height: 250px;
   width: 250px;
 }
+
+
+
+
+.img-list{
+  height: 75px;
+  width: 70px;
+}
+
+.p-resortList{
+font-size: 15px;
+}
+
