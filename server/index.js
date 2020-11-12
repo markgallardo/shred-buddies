@@ -80,6 +80,19 @@ app.get('/api/event/:eventId', (req, res, next) => {
     });
 });
 
+app.post('/api/event', (req, res, next) => {
+  if (!req.body.resortId && !req.body.startDate && !req.body.endDate && !req.body.profileId && !req.body.description) throw new ClientError(' resortId , startDate, endDate, profileId, description must be fill out', 400);
+  const insert = `
+        insert into "event"("resortId", "startDate","endDate", "profileId", "description")
+        values ($1,$2,$3,$4,$5)
+        returning *
+ `;
+  const values = [req.body.resortId, req.body.startDate, req.body.endDate, req.body.profileId, req.body.description];
+  db.query(insert, values)
+    .then(result => res.status(200).json(result.rows[0]))
+    .catch(err => next(err));
+});
+
 app.use('/api', (req, res, next) => {
   next(new ClientError(`cannot ${req.method} ${req.originalUrl}`, 404));
 });
