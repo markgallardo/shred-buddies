@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './header';
 import Profile from './profile';
 import RecommendedResortDetail from './recommended-resort-detail';
-import ResortListItem from './resort-list-item';
+import ResortList from './resort-list';
 
 export default class App extends React.Component {
 
@@ -14,7 +14,7 @@ export default class App extends React.Component {
         <Header />
         <Profile/>
         <RecommendedResortDetail/>
-        <ResortListItem/>
+        <ResortList/>
       </>
     );
   }
