@@ -1,3 +1,4 @@
+
 header {
   height: 5rem;
   background: #9EC5AB;
@@ -37,7 +38,7 @@ h2 {
 
 .create-form {
   background: lightgray;
-  height: 1000px;
+  height: 680px;
    font-family: 'Roboto', sans-serif;
 }
 
@@ -67,3 +68,4 @@ h2 {
 .p-resortList{
 font-size: 15px;
 }
+
