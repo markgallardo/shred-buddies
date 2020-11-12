@@ -54,13 +54,15 @@ export default class App extends React.Component {
     // }
     return (
       <>
+
         <Header />
         <EventList />
         {/* <EventListItem setView ={this.setView} /> */}
         {/* <CreateProfile setView ={this.setView} createProfile={this.createProfile} /> */}
         {/* <Header />
+
         <Profile/>
-        <RecommendentResorDetail/> */
+        <RecommendentResorDetail/>  */}
         <ResortList/>
       </>
     );
