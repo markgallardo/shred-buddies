@@ -207,6 +207,8 @@ COPY public.atendees ("profileId", "eventId", "isConfirmed", "isCheckedIn") FROM
 --
 
 COPY public.event ("eventId", description, "resortId", "profileId", "startDate", "endDate") FROM stdin;
+1	looking for buddy to big bear	2	5	2020-11-20	2020-11-20
+2	looking for buddy to big bear	2	5	2020-11-20	2020-11-20
 \.
 
 
@@ -239,7 +241,7 @@ COPY public.resort ("resortId", name, address, description, "imgUrl") FROM stdin
 -- Name: event_eventId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."event_eventId_seq"', 1, false);
+SELECT pg_catalog.setval('public."event_eventId_seq"', 2, true);
 
 
 --
