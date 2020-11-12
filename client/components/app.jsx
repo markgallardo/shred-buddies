@@ -1,6 +1,8 @@
 import React from 'react';
-import CreateProfile from './create-profile';
-// import Header from './header';
+import EventList from './event-list';
+// import EventListItem from './event-list-item';
+// import CreateProfile from './create-profile';
+import Header from './header';
 // import Profile from './profile';
 // import RecommendentResorDetail from './recommendent-resort-detail';
 import ResortList from './resort-list';
@@ -52,8 +54,13 @@ export default class App extends React.Component {
     // }
     return (
       <>
-        <CreateProfile setView ={this.setView} createProfile={this.createProfile} />
-        {/* {/* <Header />
+
+        <Header />
+        <EventList />
+        {/* <EventListItem setView ={this.setView} /> */}
+        {/* <CreateProfile setView ={this.setView} createProfile={this.createProfile} /> */}
+        {/* <Header />
+
         <Profile/>
         <RecommendentResorDetail/>  */}
         <ResortList/>
