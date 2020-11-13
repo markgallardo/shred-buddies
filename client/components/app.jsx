@@ -2,12 +2,14 @@ import React from 'react';
 // import EventList from './event-list';
 // import EventListItem from './event-list-item';
 // import AddEvent from './add-event';
-import CreateProfile from './create-profile';
+// import CreateProfile from './create-profile';
 import Header from './header';
 import Profile from './profile';
+// import Profile from './profile';
 // import RecommendentResorDetail from './recommendent-resort-detail';
 // import ResortList from './resort-list';
 
+import CreateProfile from './create-profile';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -19,7 +21,6 @@ export default class App extends React.Component {
     };
     this.createProfile = this.createProfile.bind(this);
     this.setView = this.setView.bind(this);
-
   }
 
   setView(name, params) {
@@ -45,27 +46,25 @@ export default class App extends React.Component {
 
       }))
       .catch(err => console.error(err));
-
   }
 
   render() {
     let view = null;
 
     if (this.state.view.name === 'create') {
-      view = <CreateProfile setView={this.setView} createProfile={this.createProfile} params={this.state.view.params} />;
-
+      view = <CreateProfile setView={this.setView} createProfile={this.createProfile} />;
     } else if (this.state.view.name === 'profile') {
-
       view =
-      <> <Header/>
+      <>
+        <Header/>
         <Profile setView={this.setView} params={this.state.view.params}/>
       </>;
     }
     return (
       <>
+
         {view}
 
-        {/* <AddEvent /> */}
         {/* <EventList /> */}
         {/* <EventListItem setView ={this.setView} />
          <CreateProfile setView ={this.setView} createProfile={this.createProfile} />
