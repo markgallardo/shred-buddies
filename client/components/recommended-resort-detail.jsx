@@ -6,10 +6,11 @@ export default class RecommendedResortDetail extends React.Component {
     this.state = {
       resort: null
     };
+
   }
 
   componentDidMount() {
-    fetch('/api/resort/')
+    fetch(`/api/resort/${this.props.params.resortId}`)
       .then(res => res.json())
       .then(resort =>
         this.setState({
@@ -19,10 +20,10 @@ export default class RecommendedResortDetail extends React.Component {
   }
 
   render() {
+
     if (!this.state.resort) {
       return null;
     }
-
     return (
       <div className="row justify-content-center">
         <div className="col-11 d-flex flex-wrap border">
@@ -37,5 +38,6 @@ export default class RecommendedResortDetail extends React.Component {
       </div>
 
     );
+
   }
 }

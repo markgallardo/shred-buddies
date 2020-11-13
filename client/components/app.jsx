@@ -9,7 +9,7 @@ import Profile from './profile';
 import ResortList from './resort-list';
 import CreateProfile from './create-profile';
 
-import EventList from './event-list';
+// import EventList from './event-list';
 import RecommendedResortDetail from './recommended-resort-detail';
 
 export default class App extends React.Component {
@@ -71,21 +71,21 @@ export default class App extends React.Component {
       view =
       <>
 
-        <Header/>
+        <Header setView={this.setView}/>
         <EventList setView={this.setView}/>;
       </>;
     } else if (this.state.view.name === 'resortList') {
       view =
       <>
-        <Header/>
+        <Header setView={this.setView} />
         <ResortList setView={this.setView} params={this.state.view.params}/>
       </>;
 
     } else if (this.state.view.name === 'resortDetails') {
       view =
       <>
-        <Header/>
-        <RecommendedResortDetail setView={this.setView} params={this.state.view.params}/>
+        <Header setView={this.setView}/>
+        <RecommendedResortDetail setView={this.setView} params={this.state.view.params} />
 
       </>;
     }
