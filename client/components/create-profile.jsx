@@ -26,6 +26,8 @@ export default class CreateProfile extends React.Component {
   handleClick(event) {
     event.preventDefault();
     this.props.createProfile(this.state);
+
+    this.props.setView('profile', { profileId: this.props.profileId });
   }
 
   render() {
