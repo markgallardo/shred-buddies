@@ -9,7 +9,7 @@ class Profile extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/api/profile')
+    fetch(`/api/profile/${this.props.params.profileId}`)
       .then(res => res.json())
       .then(profile =>
         this.setState({

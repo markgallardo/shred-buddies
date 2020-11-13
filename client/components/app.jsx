@@ -1,10 +1,10 @@
 import React from 'react';
 // import EventList from './event-list';
 // import EventListItem from './event-list-item';
-import AddEvent from './add-event';
-// import CreateProfile from './create-profile';
+// import AddEvent from './add-event';
+import CreateProfile from './create-profile';
 import Header from './header';
-// import Profile from './profile';
+import Profile from './profile';
 // import RecommendentResorDetail from './recommendent-resort-detail';
 // import ResortList from './resort-list';
 
@@ -18,6 +18,7 @@ export default class App extends React.Component {
       }
     };
     this.createProfile = this.createProfile.bind(this);
+    this.setView = this.setView.bind(this);
 
   }
 
@@ -48,17 +49,23 @@ export default class App extends React.Component {
   }
 
   render() {
-    // let view = null;
+    let view = null;
 
-    // if (this.state.view.name === 'create') {
-    //   view = <CreateProfile setView={this.setView} createProfile={this.createProfile} />;
-    // }
+    if (this.state.view.name === 'create') {
+      view = <CreateProfile setView={this.setView} createProfile={this.createProfile} params={this.state.view.params} />;
+
+    } else if (this.state.view.name === 'profile') {
+
+      view =
+      <> <Header/>
+        <Profile setView={this.setView} params={this.state.view.params}/>
+      </>;
+    }
     return (
       <>
+        {view}
 
-        <Header />
-
-        <AddEvent />
+        {/* <AddEvent /> */}
         {/* <EventList /> */}
         {/* <EventListItem setView ={this.setView} />
          <CreateProfile setView ={this.setView} createProfile={this.createProfile} />
