@@ -1,4 +1,5 @@
 import React from 'react';
+// import Profile from './profile';
 
 export default class CreateProfile extends React.Component {
   constructor(props) {
@@ -26,9 +27,18 @@ export default class CreateProfile extends React.Component {
   handleClick(event) {
     event.preventDefault();
     this.props.createProfile(this.state);
-
-    this.props.setView('profile', { profileId: this.props.profileId });
+    this.props.setView('profile', { profileId: this.props.profile.profileId });
   }
+
+  // profileDetail() {
+  //   return (
+  //     <Profile
+  //       key={profile.profileId}
+  //       profile={profile}
+  //       profileId ={profile.profileId}
+  //       setView ={this.props.setView}/>
+  //   );
+  // }
 
   render() {
     return (
