@@ -1,5 +1,5 @@
 import React from 'react';
-// import EventList from './event-list';
+import EventList from './event-list';
 // import EventListItem from './event-list-item';
 // import AddEvent from './add-event';
 // import CreateProfile from './create-profile';
@@ -10,6 +10,7 @@ import Profile from './profile';
 // import ResortList from './resort-list';
 
 import CreateProfile from './create-profile';
+// import EventListItem from './event-list-item';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -62,8 +63,14 @@ export default class App extends React.Component {
     } else if (this.state.view.name === 'profile') {
       view =
       <>
-        <Header/>
+        <Header setView={this.setView}/>
         <Profile setView={this.setView} params={this.state.view.params} profile={this.state.user}/>
+      </>;
+    } else if (this.state.view.name === 'main') {
+      view =
+      <>
+        <Header setView={this.setView}/>
+        <EventList setView={this.setView}/>
       </>;
     }
     return (
