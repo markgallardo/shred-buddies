@@ -36,8 +36,25 @@ app.get('/api/profile', (req, res, next) => {
         from profile
   `;
   db.query(select)
-    .then(result => res.status(200).json(result.rows[0]))
+    .then(result => res.status(200).json(result.rows))
     .catch(err => next(err));
+});
+
+app.get('/api/profile/:profileId', (req, res, next) => {
+  const profileId = parseInt(req.params.profileId, 10);
+  const select = `
+        select *
+        from "profile"
+        where "profileId" = $1
+  `;
+  db.query(select, [profileId])
+    .then(result => {
+      if (!result.rows[0]) {
+        next(new ClientError(`cannot find eventId of ${profileId}`, 404));
+      } else {
+        res.status(200).json(result.rows[0]);
+      }
+    });
 });
 
 app.post('/api/profile', (req, res, next) => {
