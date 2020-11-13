@@ -9,7 +9,7 @@ class Profile extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`/api/profile/${this.props.params.profileId}`)
+    fetch(`/api/profile/${this.props.profile}`)
       .then(res => res.json())
       .then(profile =>
         this.setState({
@@ -27,7 +27,7 @@ class Profile extends React.Component {
       <div>
         <h2 className="ml-2 mt-2">Profile</h2>
         <div className="d-flex">
-          <img className="profile-pic m-auto" src="./images/chewbacca.png" />
+          <img className="profile-pic m-auto" src={this.state.profile.imgUrl} />
         </div>
         <div className="card-body">
           <h2 className="m-auto">{this.state.profile.name}</h2>
