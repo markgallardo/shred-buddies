@@ -34,15 +34,6 @@ export default class CreateProfile extends React.Component {
     }
 
   }
-  // profileDetail() {
-  //   return (
-  //     <Profile
-  //       key={profile.profileId}
-  //       profile={profile}
-  //       profileId ={profile.profileId}
-  //       setView ={this.props.setView}/>
-  //   );
-  // }
 
   render() {
     return (
