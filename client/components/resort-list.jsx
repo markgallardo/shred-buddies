@@ -19,7 +19,7 @@ export default class ResortList extends React.Component {
   }
 
   resortLists() {
-    const list = this.state.resorts.map(resort => <ResortListItem key={resort.resortId} resorts={resort}/>);
+    const list = this.state.resorts.map(resort => <ResortListItem key={resort.resortId} setView={this.props.setView} resorts={resort}/>);
     return (
       <>
         {list}

@@ -6,17 +6,18 @@ import EventList from './event-list';
 import Header from './header';
 import Profile from './profile';
 // import Profile from './profile';
-// import RecommendentResorDetail from './recommendent-resort-detail';
-// import ResortList from './resort-list';
-
+import ResortList from './resort-list';
 import CreateProfile from './create-profile';
-// import EventListItem from './event-list-item';
+
+import EventList from './event-list';
+import RecommendedResortDetail from './recommended-resort-detail';
+
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       view: {
-        name: 'create',
+        name: 'main',
         params: {}
       },
       profile: null,
@@ -69,8 +70,23 @@ export default class App extends React.Component {
     } else if (this.state.view.name === 'main') {
       view =
       <>
-        <Header setView={this.setView}/>
-        <EventList setView={this.setView}/>
+
+        <Header/>
+        <EventList setView={this.setView}/>;
+      </>;
+    } else if (this.state.view.name === 'resortList') {
+      view =
+      <>
+        <Header/>
+        <ResortList setView={this.setView} params={this.state.view.params}/>
+      </>;
+
+    } else if (this.state.view.name === 'resortDetails') {
+      view =
+      <>
+        <Header/>
+        <RecommendedResortDetail setView={this.setView} params={this.state.view.params}/>
+
       </>;
     }
     return (

@@ -2,7 +2,10 @@ import React from 'react';
 
 export default function ResortListItem(props) {
   function handleClick() {
-    props.setView('resort-detail', {});
+
+    props.setView('resortDetails', { resorts: props.resorts });
+
+
   }
   return (
 
@@ -15,4 +18,5 @@ export default function ResortListItem(props) {
     </div>
 
   );
+
 }

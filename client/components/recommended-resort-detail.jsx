@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class RecommendedResorDetail extends React.Component {
+export default class RecommendedResortDetail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,7 +9,7 @@ export default class RecommendedResorDetail extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/api/resort')
+    fetch('/api/resort/')
       .then(res => res.json())
       .then(resort =>
         this.setState({
