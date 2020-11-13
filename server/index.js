@@ -30,6 +30,23 @@ app.get('/api/resort', (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.get('/api/resort/:resortId', (req, res, next) => {
+  const resortId = parseInt(req.params.resortId, 10);
+  const select = `
+        select *
+        from "resort"
+        where "resortId" = $1
+  `;
+  db.query(select, [resortId])
+    .then(result => {
+      if (!result.rows[0]) {
+        next(new ClientError(`cannot find eventId of ${resortId}`, 404));
+      } else {
+        res.status(200).json(result.rows[0]);
+      }
+    });
+});
+
 app.get('/api/profile', (req, res, next) => {
   const select = `
         select *
