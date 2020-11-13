@@ -18,7 +18,8 @@ export default class App extends React.Component {
         name: 'create',
         params: {}
       },
-      profile: null
+      profile: null,
+      user: null
     };
 
     this.createProfile = this.createProfile.bind(this);
@@ -46,7 +47,8 @@ export default class App extends React.Component {
       .then(result => result.json())
       .then(data => this.setState({
         view: { name: 'profile', params: {} },
-        profile: data.profileId
+        profile: data.profileId,
+        user: data
 
       }))
       .catch(err => console.error(err));
@@ -61,7 +63,7 @@ export default class App extends React.Component {
       view =
       <>
         <Header/>
-        <Profile setView={this.setView} params={this.state.view.params} profile={this.state.profile}/>
+        <Profile setView={this.setView} params={this.state.view.params} profile={this.state.user}/>
       </>;
     }
     return (
