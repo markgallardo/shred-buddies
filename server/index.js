@@ -76,7 +76,7 @@ app.get('/api/event', (req, res, next) => {
           from event
   `;
   db.query(select)
-    .then(result => res.status(200).json(result.rows))
+    .then(result => res.status(200).json(result.rows[0]))
     .catch(err => next(err));
 });
 
@@ -98,24 +98,23 @@ app.get('/api/event/:eventId', (req, res, next) => {
 });
 app.get('/api/events', (req, res, next) => {
 
-  // const eventId = parseInt(req.params.eventId, 10);
   const sql = `
   select "e"."eventId",
-    "r"."imgUrl" as "resort image",
-    "r"."name"as "resort name",
-    "p"."name" as "profile name",
-    "e"."description" as "event description"
+    "r"."imgUrl" as "resortImage",
+    "r"."name"as "resortName",
+    "p"."name" as "profileName",
+    "e"."description" as "eventDescription",
+    "e"."startDate" as "start",
+    "e"."endDate" as "end"
     from "event" as "e"
     join "resort" as "r" using ("resortId")
     join "profile" as "p" using ("profileId")
 
     `;
 
-  // const values = [eventId];
-
   db.query(sql)
     .then(result => {
-      res.status(200).json(result.rows);
+      res.status(200).json(result.rows[0]);
     });
 
 });

@@ -9,13 +9,14 @@ import ResortList from './resort-list';
 import CreateProfile from './create-profile';
 import RecommendedResortDetail from './recommended-resort-detail';
 import AddEvent from './add-event';
+// import AddEvent from './add-event';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       view: {
-        name: null,
+        name: 'create',
         params: {}
       },
       profile: null,
@@ -77,7 +78,7 @@ export default class App extends React.Component {
   }
 
   render() {
-    let view = <AddEvent setView={this.setView} createEvent={this.createEvent} />;
+    let view = null;
 
     if (this.state.view.name === 'create') {
       view = <CreateProfile setView={this.setView} createProfile={this.createProfile} />;
@@ -107,6 +108,12 @@ export default class App extends React.Component {
         <Header setView={this.setView}/>
         <RecommendedResortDetail setView={this.setView} params={this.state.view.params}/>
 
+      </>;
+    } else if (this.state.view.name === 'addEvent') {
+      view =
+      <>
+        <Header setView ={this.setView}/>
+        <AddEvent setView={this.setView} createEvent={this.createEvent}/>
       </>;
     }
     return (

@@ -13,6 +13,7 @@ export default class EventList extends React.Component {
     // const events = this.state.events.map(event =>
     //   <EventListItem key={event.eventId} event={event} />
     // );
+
     return (
       <div>
         <ul className="nav">
