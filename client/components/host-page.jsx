@@ -3,7 +3,7 @@ import React from 'react';
 export default class HostPage extends React.Component {
   render() {
     return (
-      <div>
+      <div className="host">
         <div className="text-center container d-flex mt-2">
           <button onClick={this.handleClick} className="btn-detail">edit</button>
           <button onClick={this.handleClick} className="btn-detail ml-1">delete</button>

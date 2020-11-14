@@ -1,25 +1,28 @@
 
 header {
   height: 5rem;
-  background: #9EC5AB;
+  background: #52616b;
+  overflow: hidden;
+  max-width:100%;
+  /* background: #9EC5AB; */
 }
 
 .head-title {
   font-family: 'Rock Salt', cursive;
   font-weight: bolder;
-  color: #1b4332;
+  color: #f0f5f9;
 }
 
 
-.fa-snowboarding,.fa-newspaper {
-  color: #1b4332;
+.fa-snowboarding,.fa-newspaper, .fa-bell {
+  color: #f0f5f9;
   font-size: 40px;
 }
-.fa-bell {
+/* .fa-bell {
   color: red;
   font-size: 40px;
 
-}
+} */
 
 h2 {
   font-family: 'Roboto', sans-serif;
@@ -32,19 +35,31 @@ h2 {
 
 .create-header {
   font-family: 'Rock Salt', cursive;
-   color: #1b4332;
+   background: #52616b;
+   color: #f0f5f9;
    font-size: 40px;
 }
 
-.create-form, .add-event {
-  background: lightgray;
-  height: 660px;
+.create-form, .add-event, .event-detail, .main-page,  .resort-detail, .host {
+  background:#c9d6df;
+  height: 650px;
    font-family: 'Roboto', sans-serif;
+   overflow: hidden;
+
+}
+
+.resort-list-page{
+  background:#c9d6df;
+  height: 650px;
+
+}
+.resort-list-item-card {
+  background: #f0f5f9;
 }
 
 .btn-detail{
-  background-color: #1B4332;
-  color: white;
+  background-color: #52616b;
+  color: #f0f5f9;
   border-radius: 10px;
   width: 250px;
   height: 40px;
@@ -98,7 +113,6 @@ font-size: 15px;
 }
 
 .container{
- height: 100vh;
  margin-top: 0;
 }
 
@@ -106,6 +120,7 @@ font-size: 15px;
   height: 300px;
   width: 340px;
 
+}
 .host-img {
 height: 250px;
 width:350px;

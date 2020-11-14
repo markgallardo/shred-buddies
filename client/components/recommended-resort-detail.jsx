@@ -25,11 +25,11 @@ export default class RecommendedResortDetail extends React.Component {
       return null;
     }
     return (
-      <div className="row justify-content-center">
+      <div className="row justify-content-center resort-detail">
         <div className="col-11 d-flex flex-wrap border">
           <h4>{this.state.resort.name}</h4>
           <p> { this.state.resort.address}</p>
-          <p>{this.state.resort.description}</p>
+          <p className="mt-n3">{this.state.resort.description}</p>
           <div className="ml-5">
             <img src={this.state.resort.imgUrl} alt="" className="img-detail"/>
           </div>
