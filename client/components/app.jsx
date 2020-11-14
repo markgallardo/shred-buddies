@@ -17,16 +17,13 @@ import EventDetails from './event-details';
 
 import HostPage from './host-page';
 
-
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       view: {
 
-
-        name: 'eventDetails',
-
+        name: 'host',
 
         params: {}
       },

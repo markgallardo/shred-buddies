@@ -15,7 +15,7 @@ export default class EventList extends React.Component {
     // );
 
     return (
-      <div>
+      <div className="main-page">
         <ul className="nav">
           <li className="nav-item">
             <a className="nav-link active" href="#" onClick={() => this.props.setView('resortList', {})}>Add Event</a>
