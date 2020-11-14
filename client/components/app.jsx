@@ -11,8 +11,12 @@ import Homepage from './home-page';
 import Notification from './notification-page';
 import RecommendedResortDetail from './recommended-resort-detail';
 import AddEvent from './add-event';
+
 import EventDetails from './event-details';
 // import AddEvent from './add-event';
+
+import HostPage from './host-page';
+
 
 export default class App extends React.Component {
   constructor(props) {
@@ -20,7 +24,9 @@ export default class App extends React.Component {
     this.state = {
       view: {
 
+
         name: 'eventDetails',
+
 
         params: {}
       },
@@ -89,7 +95,11 @@ export default class App extends React.Component {
   }
 
   render() {
-    let view = null;
+    let view =
+    <>
+      <Header setView={this.setView} />
+      <HostPage setView='host'/>
+    </>;
 
     if (this.state.view.name === 'home') {
       view = <Homepage setView={this.setView}/>;
@@ -143,6 +153,7 @@ export default class App extends React.Component {
     return (
       <>
         {view}
+
       </>
     );
   }
