@@ -2,30 +2,31 @@ import React from 'react';
 import EventList from './event-list';
 // import EventListItem from './event-list-item';
 // import AddEvent from './add-event';
-// import CreateProfile from './create-profile';
 import Header from './header';
 import Profile from './profile';
 // import Profile from './profile';
 import ResortList from './resort-list';
 import CreateProfile from './create-profile';
-
-// import EventList from './event-list';
 import RecommendedResortDetail from './recommended-resort-detail';
+import AddEvent from './add-event';
+// import AddEvent from './add-event';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       view: {
-        name: 'main',
+        name: 'create',
         params: {}
       },
       profile: null,
-      user: null
+      user: null,
+      event: null,
+      resort: null
     };
-
-    this.createProfile = this.createProfile.bind(this);
     this.setView = this.setView.bind(this);
+    this.createProfile = this.createProfile.bind(this);
+    this.createEvent = this.createEvent.bind(this);
 
   }
 
@@ -56,6 +57,26 @@ export default class App extends React.Component {
       .catch(err => console.error(err));
   }
 
+  createEvent(object) {
+    const requestOption = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(object)
+    };
+
+    fetch('/api/event', requestOption)
+      .then(result => result.json())
+      .then(data => this.setState({
+        view: { name: 'main', params: {} },
+        event: data.eventId,
+        profile: data.profileId,
+        resort: data.resortId,
+        user: data
+      }))
+      .catch(err => console.error(err));
+
+  }
+
   render() {
     let view = null;
 
@@ -70,23 +91,28 @@ export default class App extends React.Component {
     } else if (this.state.view.name === 'main') {
       view =
       <>
+        <Header setView ={this.setView}/>
+        <EventList setView={this.setView} event={this.state.user}/>;
 
-        <Header setView={this.setView}/>
-        <EventList setView={this.setView}/>;
       </>;
     } else if (this.state.view.name === 'resortList') {
       view =
       <>
-        <Header setView={this.setView} />
-        <ResortList setView={this.setView} params={this.state.view.params}/>
+          <Header setView={this.setView}/>
+          <ResortList setView={this.setView} params={this.state.view.params}/>
       </>;
 
     } else if (this.state.view.name === 'resortDetails') {
       view =
       <>
         <Header setView={this.setView}/>
-        <RecommendedResortDetail setView={this.setView} params={this.state.view.params} />
-
+        <RecommendedResortDetail setView={this.setView} params={this.state.view.params}/>
+    </>;
+    } else if (this.state.view.name === 'addEvent') {
+      view =
+      <>
+        <Header setView ={this.setView}/>
+        <AddEvent setView={this.setView} createEvent={this.createEvent}/>
       </>;
     }
     return (
@@ -94,12 +120,7 @@ export default class App extends React.Component {
 
         {view}
 
-        {/* <EventList /> */}
-        {/* <EventListItem setView ={this.setView} />
-         <CreateProfile setView ={this.setView} createProfile={this.createProfile} />
-        <Profile/>
-        <RecommendentResorDetail/>
-        <ResortList/> */}
+   
 
       </>
     );
