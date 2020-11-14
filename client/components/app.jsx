@@ -8,7 +8,7 @@ import Profile from './profile';
 // import Profile from './profile';
 import ResortList from './resort-list';
 import CreateProfile from './create-profile';
-
+import Homepage from './home-page';
 // import EventList from './event-list';
 import RecommendedResortDetail from './recommended-resort-detail';
 
@@ -17,7 +17,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       view: {
-        name: 'main',
+        name: 'home',
         params: {}
       },
       profile: null,
@@ -26,7 +26,13 @@ export default class App extends React.Component {
 
     this.createProfile = this.createProfile.bind(this);
     this.setView = this.setView.bind(this);
+    this.setUser = this.setUser.bind(this);
+  }
 
+  setUser(user) {
+    this.setState({
+      user: user
+    });
   }
 
   setView(name, params) {
@@ -59,13 +65,15 @@ export default class App extends React.Component {
   render() {
     let view = null;
 
-    if (this.state.view.name === 'create') {
+    if (this.state.view.name === 'home') {
+      view = <Homepage setView={this.setView}/>;
+    } else if (this.state.view.name === 'create') {
       view = <CreateProfile setView={this.setView} createProfile={this.createProfile} />;
     } else if (this.state.view.name === 'profile') {
       view =
       <>
         <Header setView={this.setView}/>
-        <Profile setView={this.setView} params={this.state.view.params} profile={this.state.user}/>
+        <Profile setView={this.setView} params={this.state.view.params} profile={this.state.user} setUser={this.setUser}/>
       </>;
     } else if (this.state.view.name === 'main') {
       view =
