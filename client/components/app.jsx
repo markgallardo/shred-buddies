@@ -12,7 +12,7 @@ import Homepage from './home-page';
 
 import RecommendedResortDetail from './recommended-resort-detail';
 import AddEvent from './add-event';
-// import AddEvent from './add-event';
+import HostPage from './host-page';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -20,7 +20,7 @@ export default class App extends React.Component {
     this.state = {
       view: {
 
-        name: 'home',
+        name: null,
 
         params: {}
       },
@@ -30,12 +30,10 @@ export default class App extends React.Component {
       resort: null
     };
     this.setView = this.setView.bind(this);
-     this.setUser = this.setUser.bind(this);
+    this.setUser = this.setUser.bind(this);
     this.createProfile = this.createProfile.bind(this);
     this.createEvent = this.createEvent.bind(this);
   }
-
-   
 
   setUser(user) {
     this.setState({
@@ -91,7 +89,11 @@ export default class App extends React.Component {
   }
 
   render() {
-    let view = null;
+    let view =
+    <>
+      <Header setView={this.setView} />
+      <HostPage setView='host'/>
+    </>;
 
     if (this.state.view.name === 'home') {
       view = <Homepage setView={this.setView}/>;
@@ -113,8 +115,8 @@ export default class App extends React.Component {
     } else if (this.state.view.name === 'resortList') {
       view =
       <>
-          <Header setView={this.setView}/>
-          <ResortList setView={this.setView} params={this.state.view.params}/>
+        <Header setView={this.setView}/>
+        <ResortList setView={this.setView} params={this.state.view.params}/>
       </>;
 
     } else if (this.state.view.name === 'resortDetails') {
@@ -122,7 +124,7 @@ export default class App extends React.Component {
       <>
         <Header setView={this.setView}/>
         <RecommendedResortDetail setView={this.setView} params={this.state.view.params}/>
-    </>;
+      </>;
     } else if (this.state.view.name === 'addEvent') {
       view =
       <>
@@ -134,8 +136,6 @@ export default class App extends React.Component {
       <>
 
         {view}
-
-   
 
       </>
     );

@@ -11,7 +11,7 @@ header {
 }
 
 
-.fa-snowboarding {
+.fa-snowboarding,.fa-newspaper {
   color: #1b4332;
   font-size: 40px;
 }
@@ -83,4 +83,9 @@ font-size: 15px;
 
 .start-input, .end-input {
   width:170px;
+}
+
+.host-img {
+height: 250px;
+width:350px;
 }
