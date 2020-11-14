@@ -2,8 +2,7 @@ import React from 'react';
 
 export default function ResortListItem(props) {
   function handleClick() {
-    props.setView('resortDetails', { resorts: props.resorts });
-
+    props.setView('resortDetails', { resortId: props.resorts.resortId });
   }
   return (
 

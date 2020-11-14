@@ -91,15 +91,15 @@ export default class App extends React.Component {
     } else if (this.state.view.name === 'main') {
       view =
       <>
-
         <Header setView ={this.setView}/>
         <EventList setView={this.setView} event={this.state.user}/>;
+
       </>;
     } else if (this.state.view.name === 'resortList') {
       view =
       <>
-        <Header setView={this.setView}/>
-        <ResortList setView={this.setView} params={this.state.view.params}/>
+          <Header setView={this.setView}/>
+          <ResortList setView={this.setView} params={this.state.view.params}/>
       </>;
 
     } else if (this.state.view.name === 'resortDetails') {
@@ -107,8 +107,7 @@ export default class App extends React.Component {
       <>
         <Header setView={this.setView}/>
         <RecommendedResortDetail setView={this.setView} params={this.state.view.params}/>
-
-      </>;
+    </>;
     } else if (this.state.view.name === 'addEvent') {
       view =
       <>
@@ -121,12 +120,7 @@ export default class App extends React.Component {
 
         {view}
 
-        {/* <EventList /> */}
-        {/* <EventListItem setView ={this.setView} />
-         <CreateProfile setView ={this.setView} createProfile={this.createProfile} />
-        <Profile/>
-        <RecommendentResorDetail/>
-        <ResortList/> */}
+   
 
       </>
     );
