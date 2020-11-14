@@ -7,12 +7,16 @@ import Profile from './profile';
 // import Profile from './profile';
 import ResortList from './resort-list';
 import CreateProfile from './create-profile';
-
 import Homepage from './home-page';
-
+import Notification from './notification-page';
 import RecommendedResortDetail from './recommended-resort-detail';
 import AddEvent from './add-event';
+
+import EventDetails from './event-details';
+// import AddEvent from './add-event';
+
 import HostPage from './host-page';
+
 
 export default class App extends React.Component {
   constructor(props) {
@@ -20,7 +24,9 @@ export default class App extends React.Component {
     this.state = {
       view: {
 
-        name: null,
+
+        name: 'eventDetails',
+
 
         params: {}
       },
@@ -131,10 +137,21 @@ export default class App extends React.Component {
         <Header setView ={this.setView}/>
         <AddEvent setView={this.setView} createEvent={this.createEvent}/>
       </>;
+    } else if (this.state.view.name === 'notification') {
+      view =
+      <>
+        <Header setView={this.setView}/>
+        <Notification setView={this.setView}/>
+      </>;
+    } else if (this.state.view.name === 'eventDetails') {
+      view =
+      <>
+        <Header setView={this.setView}/>
+        <EventDetails setView={this.setView}/>
+      </>;
     }
     return (
       <>
-
         {view}
 
       </>
