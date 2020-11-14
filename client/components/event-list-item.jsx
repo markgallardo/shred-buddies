@@ -32,9 +32,9 @@ export default class EventList extends React.Component {
 
     return (
 
-      <div className="col-9 m-auto">
+      <div className="col-9 m-auto" onClick>
         <div className="card bg-dark text-white">
-          <img className="card-img event-img" src="images/big-bear.jpg" alt="Card image" />
+          <img className="card-img event-img" src={events.resortImage} alt="Card image" />
           <div className="card-img-overlay">
             <h5 className="card-title">{events.resortName}</h5>
             <p className="mt-n2">starts: {start.toDateString()}</p>

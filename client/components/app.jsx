@@ -7,11 +7,11 @@ import Profile from './profile';
 // import Profile from './profile';
 import ResortList from './resort-list';
 import CreateProfile from './create-profile';
-
 import Homepage from './home-page';
-
+import Notification from './notification-page';
 import RecommendedResortDetail from './recommended-resort-detail';
 import AddEvent from './add-event';
+import EventDetails from './event-details';
 // import AddEvent from './add-event';
 
 export default class App extends React.Component {
@@ -20,7 +20,7 @@ export default class App extends React.Component {
     this.state = {
       view: {
 
-        name: 'home',
+        name: 'eventDetails',
 
         params: {}
       },
@@ -30,12 +30,10 @@ export default class App extends React.Component {
       resort: null
     };
     this.setView = this.setView.bind(this);
-     this.setUser = this.setUser.bind(this);
+    this.setUser = this.setUser.bind(this);
     this.createProfile = this.createProfile.bind(this);
     this.createEvent = this.createEvent.bind(this);
   }
-
-   
 
   setUser(user) {
     this.setState({
@@ -113,8 +111,8 @@ export default class App extends React.Component {
     } else if (this.state.view.name === 'resortList') {
       view =
       <>
-          <Header setView={this.setView}/>
-          <ResortList setView={this.setView} params={this.state.view.params}/>
+        <Header setView={this.setView}/>
+        <ResortList setView={this.setView} params={this.state.view.params}/>
       </>;
 
     } else if (this.state.view.name === 'resortDetails') {
@@ -122,21 +120,29 @@ export default class App extends React.Component {
       <>
         <Header setView={this.setView}/>
         <RecommendedResortDetail setView={this.setView} params={this.state.view.params}/>
-    </>;
+      </>;
     } else if (this.state.view.name === 'addEvent') {
       view =
       <>
         <Header setView ={this.setView}/>
         <AddEvent setView={this.setView} createEvent={this.createEvent}/>
       </>;
+    } else if (this.state.view.name === 'notification') {
+      view =
+      <>
+        <Header setView={this.setView}/>
+        <Notification setView={this.setView}/>
+      </>;
+    } else if (this.state.view.name === 'eventDetails') {
+      view =
+      <>
+        <Header setView={this.setView}/>
+        <EventDetails setView={this.setView}/>
+      </>;
     }
     return (
       <>
-
         {view}
-
-   
-
       </>
     );
   }
