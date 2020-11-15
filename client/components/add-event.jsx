@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 export default class AddEvent extends React.Component {
@@ -93,3 +94,4 @@ export default class AddEvent extends React.Component {
     );
   }
 }
+
