@@ -126,3 +126,7 @@ height: 250px;
 width:350px;
 
 }
+
+.header-icon{
+  -webkit-text-stroke: 1px #52616b;
+}
