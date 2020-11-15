@@ -19,7 +19,7 @@ export default class App extends React.Component {
     this.state = {
       view: {
 
-        name: 'create',
+        name: 'main',
 
         params: {}
       },
@@ -27,7 +27,8 @@ export default class App extends React.Component {
       user: null,
       event: null,
       resort: null,
-      user2: null
+      user2: null,
+      events: null
     };
     this.setView = this.setView.bind(this);
     this.setUser = this.setUser.bind(this);
@@ -150,7 +151,7 @@ export default class App extends React.Component {
       view =
       <>
         <Header setView={this.setView}/>
-        <EventDetails setView={this.setView}/>
+        <EventDetails setView={this.setView} params={this.state.view.params}/>
       </>;
     } else if (this.state.view.name === 'host') {
       view =

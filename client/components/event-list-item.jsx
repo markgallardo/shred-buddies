@@ -6,6 +6,7 @@ export default class EventList extends React.Component {
     this.state = {
       events: []
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount(object) {
@@ -24,6 +25,12 @@ export default class EventList extends React.Component {
       .catch(err => console.error(err));
   }
 
+  handleClick() {
+    if (this.state.events) {
+      this.props.setView('eventDetails', { eventsId: this.state.events });
+    }
+  }
+
   render() {
     const { events } = this.state;
 
@@ -32,7 +39,7 @@ export default class EventList extends React.Component {
 
     return (
 
-      <div className="col-9 m-auto" onClick>
+      <div className="col-9 m-auto" onClick={this.handleClick}>
         <div className="card bg-dark text-white">
           <img className="card-img event-img" src={events.resortImage} alt="Card image" />
           <div className="card-img-overlay">
