@@ -31,6 +31,7 @@ h2 {
 
 .profile-pic {
   max-width: 180px;
+  border-radius: 50%;
 }
 
 
@@ -41,22 +42,26 @@ h2 {
    font-size: 40px;
 }
 
-.create-form, .add-event, .event-detail, .main-page,  .resort-detail, .host {
+.create-form, .add-event, .event-detail, .main-page,  .resort-detail, .host, .profile-page{
   background:#c9d6df;
-  height: 650px;
+  height: 670px;
    font-family: 'Roboto', sans-serif;
    overflow: hidden;
+
 
 }
 
 .resort-list-page{
   background:#c9d6df;
-  height: 650px;
+  height: 670px;
+  position: fixed;
 
 }
 .resort-list-item-card {
   background: #f0f5f9;
 }
+
+
 
 .btn-detail{
   background-color: #52616b;
@@ -103,13 +108,17 @@ font-size: 15px;
 
 
 .homePage{
+
   width: 400px;
   height: 700px;
+
   margin: 0;
   padding: 0;
   background-image: url(images/equipment-wanaka-snowboard-youth.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+
+  background-size: cover;
+
 }
 
 .container{
