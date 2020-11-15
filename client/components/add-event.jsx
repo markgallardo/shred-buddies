@@ -39,13 +39,15 @@ export default class AddEvent extends React.Component {
   handleClick(event) {
     event.preventDefault();
 
-    if (this.props.user) {
+    this.props.createEvent(this.state);
+    if (this.props.event) {
 
-      this.props.setView('main', { eventId: this.props.event });
+      this.props.setView('host', { eventId: this.props.event });
     }
   }
 
   render() {
+
     if (!this.state.resort) {
       return null;
     }
@@ -55,7 +57,8 @@ export default class AddEvent extends React.Component {
         <form>
           <div className="form-group">
             <label htmlFor="exampleFormControlInput1"><h3 className="mt-2">Add Event</h3></label>
-            <h3>{this.state.resort.name}</h3>
+            {/* <h3>{this.state.resort.name}</h3> */}
+            <input onChange={this.handleChange} value={this.state.resortId} name="resortId" type="text" className="form-control" placeholder={this.state.resort.name}/>
           </div>
           <div className="d-flex">
             <div className="">
@@ -94,4 +97,3 @@ export default class AddEvent extends React.Component {
     );
   }
 }
-

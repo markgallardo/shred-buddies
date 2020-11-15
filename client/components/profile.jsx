@@ -15,7 +15,7 @@ class Profile extends React.Component {
     }
 
     return (
-      <div>
+      <div className="profile-page">
         <h2 className="ml-2 mt-2">Profile</h2>
         <div className="d-flex">
           <img className="profile-pic m-auto" src={imgUrl} />
