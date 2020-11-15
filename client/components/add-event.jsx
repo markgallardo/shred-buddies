@@ -1,18 +1,30 @@
+
 import React from 'react';
 
 export default class AddEvent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      resortId: 0,
+      resortId: '',
       description: '',
       startDate: '',
       endDate: '',
-      profileId: 0
+      profileId: '',
+      resort: null
 
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentDidMount() {
+    fetch(`/api/resort/${this.props.params.resortId}`)
+      .then(res => res.json())
+      .then(resort =>
+        this.setState({
+          resort: resort
+        }))
+      .catch(err => console.error(err));
   }
 
   handleChange(event) {
@@ -34,12 +46,16 @@ export default class AddEvent extends React.Component {
   }
 
   render() {
+    if (!this.state.resort) {
+      return null;
+    }
+
     return (
       <div className="container add-event">
         <form>
           <div className="form-group">
             <label htmlFor="exampleFormControlInput1"><h3 className="mt-2">Add Event</h3></label>
-            <input onChange={this.handleChange} value={this.state.resortId} name="resortId" type="text" className="form-control" id="exampleFormControlInput1" placeholder="location" />
+            <h3>{this.state.resort.name}</h3>
           </div>
           <div className="d-flex">
             <div className="">
@@ -78,3 +94,4 @@ export default class AddEvent extends React.Component {
     );
   }
 }
+
