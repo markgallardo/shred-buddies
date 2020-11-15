@@ -1,11 +1,9 @@
 
 import React from 'react';
 import EventList from './event-list';
-// import EventListItem from './event-list-item';
 // import AddEvent from './add-event';
 import Header from './header';
 import Profile from './profile';
-// import Profile from './profile';
 import ResortList from './resort-list';
 import CreateProfile from './create-profile';
 import Homepage from './home-page';
@@ -14,8 +12,6 @@ import RecommendedResortDetail from './recommended-resort-detail';
 import AddEvent from './add-event';
 
 import EventDetails from './event-details';
-// import AddEvent from './add-event';
-
 import HostPage from './host-page';
 
 export default class App extends React.Component {
@@ -24,7 +20,7 @@ export default class App extends React.Component {
     this.state = {
       view: {
 
-        name: 'resortList',
+        name: 'create',
 
         params: {}
       },
@@ -89,7 +85,7 @@ export default class App extends React.Component {
     fetch('/api/event', requestOption)
       .then(result => result.json())
       .then(data => this.setState({
-        view: { name: 'main', params: {} },
+        view: { name: 'host', params: {} },
         event: data.eventId,
         profile: data.profileId,
         resort: data.resortId,
@@ -100,11 +96,14 @@ export default class App extends React.Component {
   }
 
   render() {
-    let view =
-    <>
+    let view = <>
       <Header setView={this.setView} />
-      <HostPage setView='host' event={this.state.user2} setUser2={this.setUser2}/>
+      <AddEvent setView={this.setView} createEvent={this.createEvent} resort={this.state.resort} params={this.state.view.params} />
     </>;
+    // <>
+    //   <Header setView={this.setView} />
+    //   <HostPage setView='host' event={this.state.user2} setUser2={this.setUser2}/>
+    // </>;
 
     if (this.state.view.name === 'home') {
       view = <Homepage setView={this.setView}/>;
@@ -154,6 +153,13 @@ export default class App extends React.Component {
         <Header setView={this.setView}/>
         <EventDetails setView={this.setView}/>
       </>;
+    } else if (this.state.view.name === 'host') {
+      view =
+      <>
+        <Header setView={this.setView}/>
+        <HostPage setView={this.setView} params={this.state.view.params} event={this.state.user2}/>
+      </>;
+
     }
     return (
       <>
@@ -163,4 +169,3 @@ export default class App extends React.Component {
     );
   }
 }
-
