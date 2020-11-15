@@ -23,14 +23,15 @@ export default class App extends React.Component {
     this.state = {
       view: {
 
-        name: 'host',
+        name: 'resortList',
 
         params: {}
       },
       profile: null,
       user: null,
       event: null,
-      resort: null
+      resort: null,
+      user2: null
     };
     this.setView = this.setView.bind(this);
     this.setUser = this.setUser.bind(this);
@@ -41,6 +42,12 @@ export default class App extends React.Component {
   setUser(user) {
     this.setState({
       user: user
+    });
+  }
+
+  setUser2(user2) {
+    this.setState({
+      user2: user2
     });
   }
 
@@ -85,7 +92,7 @@ export default class App extends React.Component {
         event: data.eventId,
         profile: data.profileId,
         resort: data.resortId,
-        user: data
+        user2: data
       }))
       .catch(err => console.error(err));
 
@@ -95,7 +102,7 @@ export default class App extends React.Component {
     let view =
     <>
       <Header setView={this.setView} />
-      <HostPage setView='host'/>
+      <HostPage setView='host' event={this.state.user2} setUser2={this.setUser2}/>
     </>;
 
     if (this.state.view.name === 'home') {
@@ -126,13 +133,13 @@ export default class App extends React.Component {
       view =
       <>
         <Header setView={this.setView}/>
-        <RecommendedResortDetail setView={this.setView} params={this.state.view.params}/>
+        <RecommendedResortDetail setView={this.setView} params={this.state.view.params} />
       </>;
     } else if (this.state.view.name === 'addEvent') {
       view =
       <>
         <Header setView ={this.setView}/>
-        <AddEvent setView={this.setView} createEvent={this.createEvent}/>
+        <AddEvent setView={this.setView} createEvent={this.createEvent} resort={this.state.resort} params={this.state.view.params}/>
       </>;
     } else if (this.state.view.name === 'notification') {
       view =

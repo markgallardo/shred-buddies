@@ -7,6 +7,7 @@ export default class RecommendedResortDetail extends React.Component {
       resort: null
     };
 
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -17,6 +18,12 @@ export default class RecommendedResortDetail extends React.Component {
           resort: resort
         }))
       .catch(err => console.error(err));
+  }
+
+  handleClick(event) {
+
+    this.props.setView('addEvent', { resortId: this.state.resort.resortId });
+
   }
 
   render() {
@@ -34,7 +41,7 @@ export default class RecommendedResortDetail extends React.Component {
             <img src={this.state.resort.imgUrl} alt="" className="img-detail"/>
           </div>
         </div>
-        <button className="mt-2 btn-detail">Add to Event </button>
+        <button className="mt-2 btn-detail" onClick={this.handleClick}>Add to Event </button>
       </div>
 
     );

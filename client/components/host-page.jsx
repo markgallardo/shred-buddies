@@ -1,7 +1,25 @@
 import React from 'react';
 
 export default class HostPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      resort: null
+    };
+  }
+
+  componentDidMount() {
+    fetch(`/api/resort/${this.props.params.resortId}`)
+      .then(res => res.json())
+      .then(resort =>
+        this.setState({
+          resort: resort
+        }))
+      .catch(err => console.error(err));
+  }
+
   render() {
+
     return (
       <div className="host">
         <div className="text-center container d-flex mt-2">
@@ -11,7 +29,7 @@ export default class HostPage extends React.Component {
         <div className="mt-2 container">
           <img className="host-img" src="/images/big-bear.jpg"/>
           <div className="d-flex">
-            <h2>Big Bear</h2>
+            <h2>{this.state.resort.name}</h2>
             <div className="ml-5">
               <h4>Date</h4>
             </div>
