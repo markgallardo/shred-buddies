@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Homepage(props) {
   return (
-    <div className=" container homePage" >
+    <div className="container homePage" >
       <div className="row d-flex align-items-center justify-content-center  ">
         <h1 className="head-title d-flex text-center mt-5">SHRED  BUDDIES</h1>
         <div className="mt-5 border">

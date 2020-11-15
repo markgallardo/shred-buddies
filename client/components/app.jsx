@@ -12,7 +12,6 @@ import Homepage from './home-page';
 import Notification from './notification-page';
 import RecommendedResortDetail from './recommended-resort-detail';
 import AddEvent from './add-event';
-
 import EventDetails from './event-details';
 // import AddEvent from './add-event';
 
@@ -24,7 +23,7 @@ export default class App extends React.Component {
     this.state = {
       view: {
 
-        name: 'resortList',
+        name: 'create',
 
         params: {}
       },
@@ -127,7 +126,7 @@ export default class App extends React.Component {
       view =
       <>
         <Header setView={this.setView}/>
-        <ResortList setView={this.setView} params={this.state.view.params}/>
+        <ResortList setView={this.setView} params={this.state.view.params} />
       </>;
 
     } else if (this.state.view.name === 'resortDetails') {
@@ -163,4 +162,3 @@ export default class App extends React.Component {
     );
   }
 }
-

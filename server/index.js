@@ -114,7 +114,6 @@ app.get('/api/event/:eventId', (req, res, next) => {
     });
 });
 app.get('/api/events', (req, res, next) => {
-
   const sql = `
   select "e"."eventId",
     "r"."imgUrl" as "resortImage",
@@ -128,24 +127,84 @@ app.get('/api/events', (req, res, next) => {
     join "profile" as "p" using ("profileId")
 
     `;
-
   db.query(sql)
     .then(result => {
       res.status(200).json(result.rows[0]);
     });
 
 });
+// app.post('/api/event', (req, res, next) => {
+//   if (!req.body.resortId && !req.body.startDate && !req.body.endDate && !req.body.profileId && !req.body.description) throw new ClientError(' resortId , startDate, endDate, profileId, description must be fill out', 400);
+//   const insert = `
+//         insert into "event"("resortId", "startDate","endDate", "profileId", "description")
+//         values ($1,$2,$3,$4,$5)
+//         returning *
+//  `;
+//   const values = [req.body.resortId, req.body.startDate, req.body.endDate, req.body.profileId, req.body.description];
+//   db.query(insert, values)
+//     .then(result => res.status(200).json(result.rows[0]))
+//     .catch(err => next(err));
+// });
+// app.get('/api/addevents/:eventId', (req, res, next) => {
+//   const eventId = parseInt(req.params.eventId, 10);
+//   const select = `
+//         select "e"."eventId",
+//                 "e"."startDate",
+//                 "e"."endDate",
+//                 "e"."description",
+//                 "p"."name" as "profileName",
+//                 "p"."imgUrl"as "profileImg",
+//                 "r"."name" as "resortName",
+//                 "r"."imgUrl" as "resortImg"
+//                 from "event" as "e"
+//                 join "profile" as "p" using("profileId")
+//                 join "resort" as "r" using("resortId")
+//                 where "e"."eventId" = $1
+//       `;
+//   db.query(select, [eventId])
+//     .then(result => {
+//       res.status(201).json(result.rows[0]);
+//     })
+//     .catch(err => {
+//       console.error(err);
+//       next(err);
+//     });
+// });
+
 app.post('/api/event', (req, res, next) => {
   if (!req.body.resortId && !req.body.startDate && !req.body.endDate && !req.body.profileId && !req.body.description) throw new ClientError(' resortId , startDate, endDate, profileId, description must be fill out', 400);
   const insert = `
         insert into "event"("resortId", "startDate","endDate", "profileId", "description")
         values ($1,$2,$3,$4,$5)
-        returning *
+        returning "eventId"
  `;
   const values = [req.body.resortId, req.body.startDate, req.body.endDate, req.body.profileId, req.body.description];
   db.query(insert, values)
-    .then(result => res.status(200).json(result.rows[0]))
-    .catch(err => next(err));
+    .then(result => result.rows[0])
+    .then(result => {
+      const select = `
+        select "e"."eventId",
+                "e"."startDate",
+                "e"."endDate",
+                "e"."description",
+                "p"."name" as "profileName",
+                "p"."imgUrl"as "profileImg",
+                "r"."name" as "resortName",
+                "r"."imgUrl" as "resortImg"
+                from "event" as "e"
+                join "profile" as "p" using("profileId")
+                join "resort" as "r" using("resortId")
+                where "e"."eventId" = $1
+      `;
+      db.query(select, [result.eventId])
+        .then(result => {
+          res.status(201).json(result.rows[0]);
+        });
+    })
+    .catch(err => {
+      console.error(err);
+      next(err);
+    });
 });
 
 app.use('/api', (req, res, next) => {
