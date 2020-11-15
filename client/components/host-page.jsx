@@ -10,7 +10,7 @@ export default class HostPage extends React.Component {
   }
 
   render() {
-    const { resortId, description, startDate, endDate } = this.props.event;
+    const { description, startDate, endDate, resortImg, resortName } = this.props.event;
     if (!this.props.event) {
       return null;
     }
@@ -24,9 +24,9 @@ export default class HostPage extends React.Component {
           <button onClick={this.handleClick} className="btn-detail ml-1">delete</button>
         </div>
         <div className="mt-2 container">
-          <img className="host-img" src="/images/big-bear.jpg"/>
+          <img className="host-img" src={resortImg}/>
           <div className="d-flex">
-            <h2>{resortId}</h2>
+            <h2>{resortName}</h2>
             <div className="ml-5">
               <h4>{start.toDateString()}</h4>
               <h4>{end.toDateString()}</h4>

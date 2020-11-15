@@ -3,7 +3,6 @@ import React from 'react';
 export default function Homepage(props) {
   return (
 
-
     <div className="homePage container" >
 
       <div className="row d-flex align-items-center justify-content-center  ">
