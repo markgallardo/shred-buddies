@@ -207,6 +207,41 @@ app.post('/api/event', (req, res, next) => {
     });
 });
 
+app.delete('/api/event/:eventId', (req, res) => {
+  const eventId = parseInt(req.params.eventId, 10);
+  if (!Number.isInteger(eventId) || eventId <= 0) {
+    res.status(400).json({
+      error: `${eventId} is an invalid eventId`
+    });
+
+  }
+  const sql = `
+  delete from "event"
+where "eventId"= $1
+returning *
+`;
+  const values = [eventId];
+
+  db.query(sql, values)
+    .then(result => {
+      const event = result.rows[0];
+      if (!event) {
+        res.status(404).json({
+          error: 'The event cant be found'
+        });
+      } else {
+        res.status(204).json(event);
+      }
+
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'An unexpected error occurred'
+      });
+    });
+});
+
 app.use('/api', (req, res, next) => {
   next(new ClientError(`cannot ${req.method} ${req.originalUrl}`, 404));
 });
