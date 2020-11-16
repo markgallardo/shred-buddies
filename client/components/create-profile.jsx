@@ -29,13 +29,13 @@ export default class CreateProfile extends React.Component {
     this.props.createProfile(this.state);
 
     if (this.props.profile) {
-
       this.props.setView('profile', { profileId: this.props.profile });
     }
 
   }
 
   render() {
+
     return (
       <div className="create-form">
         <header className="create-header d-flex justify-content-center align-items-center">SB</header>

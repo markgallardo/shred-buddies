@@ -56,10 +56,11 @@ export default class AddEvent extends React.Component {
         <form>
           <div className="form-group">
             <label htmlFor="exampleFormControlInput1"><h3 className="mt-2">Add Event</h3></label>
-            <select onChange ={this.handleChange} id={this.state.resortId} name="resortId" >
+            <select className="ml-4" onChange ={this.handleChange} id={this.state.resortId} name="resortId" >
               <option> select mountain</option>
               <option value="1">mammoth</option>
               <option value="2">bear mountain</option>
+              <option value="3">mountain high</option>
             </select>
           </div>
           <div className="d-flex">
