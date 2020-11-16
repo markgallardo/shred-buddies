@@ -21,7 +21,6 @@ export default class EventList extends React.Component {
       .then(data => this.setState({
         events: data
       }))
-
       .catch(err => console.error(err));
   }
 

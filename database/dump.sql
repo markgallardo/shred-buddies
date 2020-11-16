@@ -207,6 +207,7 @@ COPY public.atendees ("profileId", "eventId", "isConfirmed", "isCheckedIn") FROM
 --
 
 COPY public.event ("eventId", description, "resortId", "profileId", "startDate", "endDate") FROM stdin;
+
 4	hello there	1	2	2020-11-10	2020-11-15
 12	asdfasfd	1	0	2020-11-12	2020-11-14
 13	hello mark	1	0	2020-11-28	2020-11-29
@@ -285,6 +286,7 @@ COPY public.event ("eventId", description, "resortId", "profileId", "startDate",
 88	bbb	1	5	2020-11-17	2020-11-18
 100	gg	1	5	2020-11-17	2020-11-26
 105	We would like to leave first thing in the morning.	1	5	2020-11-16	2020-11-18
+
 \.
 
 
@@ -300,6 +302,7 @@ COPY public.profile ("profileId", name, email, skill, "imgUrl", description) FRO
 5	mark	someemail	beginner	https://static.wikia.nocookie.net/starwars/images/4/48/Chewbacca_TLJ.png/revision/latest?cb=20190830144754	i like bunny slope
 6	mark	someemail	beginner	https://static.wikia.nocookie.net/starwars/images/4/48/Chewbacca_TLJ.png/revision/latest?cb=20190830144754	i like bunny slope
 8	jason	jason25@gmail.com	intermediate	https://image.cnbcfm.com/api/v1/image/101524695-457220551.jpg?v=1395781183&w=1400&h=950	I also like bunny slopes
+
 9	Jason Gonzales	jasongonzo25@gmail.com	expert	dfadf	dfdfasfasdf
 10	Kobe Bryant	jasongonzo25@gmail.com	beginner	dfadf	dfasfd
 11	Jason Gonzales	jasongonzo25@gmail.com	expert	img url	frffff
@@ -356,6 +359,7 @@ COPY public.profile ("profileId", name, email, skill, "imgUrl", description) FRO
 62	Jason Gonzales	jasongonzo25@gmail.com	beginner	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	I love coding and snowboarding at the same time.
 63	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	cccc
 64	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	vvvv
+
 \.
 
 
@@ -374,14 +378,18 @@ COPY public.resort ("resortId", name, address, description, "imgUrl") FROM stdin
 -- Name: event_eventId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
+
 SELECT pg_catalog.setval('public."event_eventId_seq"', 105, true);
+
 
 
 --
 -- Name: profile_profileId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
+
 SELECT pg_catalog.setval('public."profile_profileId_seq"', 64, true);
+
 
 
 --
