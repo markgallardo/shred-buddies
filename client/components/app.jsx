@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import EventList from './event-list';
 // import AddEvent from './add-event';
@@ -19,7 +20,7 @@ export default class App extends React.Component {
     this.state = {
       view: {
 
-        name: 'main',
+        name: 'home',
 
         params: {}
       },
@@ -169,3 +170,4 @@ export default class App extends React.Component {
     );
   }
 }
+
