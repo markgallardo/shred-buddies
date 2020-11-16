@@ -96,8 +96,19 @@ export default class App extends React.Component {
 
   }
 
+  deleteEvent(object) {
+
+    const eventId = object;
+    fetch('/api/event/' + eventId, {
+      method: 'DELETE'
+    })
+
+      .catch(err => console.error(err));
+  }
+
   render() {
     let view = <>
+
       <Header setView={this.setView} />
       <AddEvent setView={this.setView} createEvent={this.createEvent} resort={this.state.resort} params={this.state.view.params} />
     </>;
@@ -107,59 +118,59 @@ export default class App extends React.Component {
     // </>;
 
     if (this.state.view.name === 'home') {
-      view = <Homepage setView={this.setView}/>;
+      view = <Homepage setView={this.setView} />;
     } else if (this.state.view.name === 'create') {
       view = <CreateProfile setView={this.setView} createProfile={this.createProfile} />;
     } else if (this.state.view.name === 'profile') {
       view =
-      <>
-        <Header setView={this.setView}/>
-        <Profile setView={this.setView} params={this.state.view.params} profile={this.state.user} setUser={this.setUser}/>
-      </>;
+        <>
+          <Header setView={this.setView} />
+          <Profile setView={this.setView} params={this.state.view.params} profile={this.state.user} setUser={this.setUser} />
+        </>;
     } else if (this.state.view.name === 'main') {
       view =
-      <>
-        <Header setView ={this.setView}/>
-        <EventList setView={this.setView} event={this.state.user}/>;
+        <>
+          <Header setView={this.setView} />
+          <EventList setView={this.setView} event={this.state.user} />;
 
-      </>;
+        </>;
     } else if (this.state.view.name === 'resortList') {
       view =
-      <>
-        <Header setView={this.setView}/>
-        <ResortList setView={this.setView} params={this.state.view.params} />
-      </>;
+        <>
+          <Header setView={this.setView} />
+          <ResortList setView={this.setView} params={this.state.view.params} />
+        </>;
 
     } else if (this.state.view.name === 'resortDetails') {
       view =
-      <>
-        <Header setView={this.setView}/>
-        <RecommendedResortDetail setView={this.setView} params={this.state.view.params} />
-      </>;
+        <>
+          <Header setView={this.setView} />
+          <RecommendedResortDetail setView={this.setView} params={this.state.view.params} />
+        </>;
     } else if (this.state.view.name === 'addEvent') {
       view =
-      <>
-        <Header setView ={this.setView}/>
-        <AddEvent setView={this.setView} createEvent={this.createEvent} resort={this.state.resort} params={this.state.view.params}/>
-      </>;
+        <>
+          <Header setView={this.setView} />
+          <AddEvent setView={this.setView} createEvent={this.createEvent} resort={this.state.resort} params={this.state.view.params} />
+        </>;
     } else if (this.state.view.name === 'notification') {
       view =
-      <>
-        <Header setView={this.setView}/>
-        <Notification setView={this.setView}/>
-      </>;
+        <>
+          <Header setView={this.setView} />
+          <Notification setView={this.setView} />
+        </>;
     } else if (this.state.view.name === 'eventDetails') {
       view =
-      <>
-        <Header setView={this.setView}/>
-        <EventDetails setView={this.setView} params={this.state.view.params}/>
-      </>;
+        <>
+          <Header setView={this.setView} />
+          <EventDetails setView={this.setView} params={this.state.view.params} />
+        </>;
     } else if (this.state.view.name === 'host') {
       view =
-      <>
-        <Header setView={this.setView}/>
-        <HostPage setView={this.setView} params={this.state.view.params} event={this.state.user2}/>
-      </>;
+        <>
+          <Header setView={this.setView} />
+          <HostPage setView={this.setView} params={this.state.view.params} event={this.state.user2} deleteEvent={this.deleteEvent} />
+        </>;
 
     }
     return (
