@@ -25,7 +25,7 @@ export default class EventList extends React.Component {
             <a className="nav-link" href="#">Upcoming Event</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Your Event</a>
+            <a className="nav-link" href="#" onClick={() => this.props.setView('host', {})}>Your Event</a>
           </li>
 
         </ul>
@@ -36,5 +36,3 @@ export default class EventList extends React.Component {
     );
   }
 }
-
-

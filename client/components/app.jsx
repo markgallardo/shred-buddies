@@ -1,8 +1,5 @@
-
-
 import React from 'react';
 import EventList from './event-list';
-// import AddEvent from './add-event';
 import Header from './header';
 import Profile from './profile';
 import ResortList from './resort-list';
@@ -181,4 +178,3 @@ export default class App extends React.Component {
     );
   }
 }
-
