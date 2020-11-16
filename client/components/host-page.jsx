@@ -13,6 +13,7 @@ export default class HostPage extends React.Component {
   handleClick(event) {
 
     this.props.deleteEvent(this.props.event.eventId);
+    this.props.setView('main', {});
 
   }
 
