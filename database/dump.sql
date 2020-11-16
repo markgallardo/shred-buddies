@@ -354,6 +354,8 @@ COPY public.profile ("profileId", name, email, skill, "imgUrl", description) FRO
 60	Jason Gonzales	jasongonzo25@gmail.com	intermediate		dadf
 61	Mark Justin Gallardo	mark@yahoo.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	I like bunny slopes
 62	Jason Gonzales	jasongonzo25@gmail.com	beginner	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	I love coding and snowboarding at the same time.
+63	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	cccc
+64	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	vvvv
 \.
 
 
@@ -379,7 +381,7 @@ SELECT pg_catalog.setval('public."event_eventId_seq"', 105, true);
 -- Name: profile_profileId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."profile_profileId_seq"', 62, true);
+SELECT pg_catalog.setval('public."profile_profileId_seq"', 64, true);
 
 
 --
