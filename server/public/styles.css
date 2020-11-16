@@ -139,3 +139,18 @@ width:350px;
 .header-icon{
   -webkit-text-stroke: 1px #52616b;
 }
+
+.btn-eventdetail{
+  background-color: #52616b;
+  color: #f0f5f9;
+  border-radius: 10px;
+  width: 150px;
+  height: 30px;
+   font-family: 'Roboto', sans-serif;
+}
+
+.eventdetaildesc{
+  background-color: #f0f5f9;
+  height: 100px;
+
+}

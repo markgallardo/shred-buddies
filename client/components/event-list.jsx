@@ -29,7 +29,7 @@ export default class EventList extends React.Component {
 
         </ul>
         <div>
-          {<EventListItem />}
+          {<EventListItem setView={this.props.setView}/>}
         </div>
       </div>
     );
