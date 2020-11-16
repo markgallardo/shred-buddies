@@ -22,9 +22,9 @@ export default class EventDetails extends React.Component {
     const { events } = this.state;
     const start = new Date(events.start);
 
-    // if (!this.state.events) {
-    //   return null;
-
+    if (!this.state.events) {
+      return null;
+    }
     return (
       <div className ="event-detail">
         <div className="container">
@@ -34,8 +34,10 @@ export default class EventDetails extends React.Component {
           <div>
             <p><i className="fas fa-tram ml-3"></i>{events.resortName}</p>
             <p><i className="fas fa-calendar-day ml-3"></i>{start.toDateString()}</p>
-            <button>request to join</button>
-            <p>{events.eventDescription}</p>
+            <button className="btn-eventdetail mb-1">request to join</button>
+            <div className="eventdetaildesc mt-1">
+              <p>{events.eventDescription}</p>
+            </div>
           </div>
 
         </div>
