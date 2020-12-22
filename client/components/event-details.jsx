@@ -41,8 +41,8 @@ export default class EventDetails extends React.Component {
             <img src={events.resortImage} alt={events.resortName} className="imgEventDetails mt-3"/>
           </div>
           <div>
-            <p><i className="fas fa-tram ml-3"></i>{events.resortName}</p>
-            <p><i className="fas fa-calendar-day ml-3"></i>{start.toDateString()}</p>
+            <p><i className="fas fa-tram"></i>{events.resortName}</p>
+            <p><i className="fas fa-calendar-day"></i>{start.toDateString()}</p>
             <button onClick={this.handleClick} className="btn-eventdetail mb-1">request to join</button>
             <div className="eventdetaildesc mt-1">
               <p>{events.eventDescription}</p>

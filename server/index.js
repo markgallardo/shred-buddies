@@ -129,7 +129,7 @@ app.get('/api/events', (req, res, next) => {
     `;
   db.query(sql)
     .then(result => {
-      res.status(200).json(result.rows[0]);
+      res.status(200).json(result.rows);
     });
 
 });
