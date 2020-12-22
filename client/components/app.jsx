@@ -18,7 +18,7 @@ export default class App extends React.Component {
     this.state = {
       view: {
 
-        name: 'home',
+        name: 'resortList',
 
         params: {}
       },
@@ -28,6 +28,7 @@ export default class App extends React.Component {
       resort: null,
       user2: null,
       events: null
+
     };
     this.setView = this.setView.bind(this);
     this.setUser = this.setUser.bind(this);

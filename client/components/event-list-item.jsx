@@ -46,6 +46,8 @@ export default class EventList extends React.Component {
             <p className="mt-n2">starts: {start.toDateString()}</p>
             <p className="mt-n4">ends: {end.toDateString()}</p>
             <p className="card-text mt-n2">{events.eventDescription}</p>
+            <p className="card-text mt-n2">participants : {this.props.participants}</p>
+
           </div>
         </div>
       </div>
