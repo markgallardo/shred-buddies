@@ -4,8 +4,10 @@ export default class EventDetails extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      events: ''
+      events: '',
+      participants: 0
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount(object) {
@@ -18,8 +20,15 @@ export default class EventDetails extends React.Component {
       .catch(err => console.error(err));
   }
 
+  handleClick() {
+
+    this.setState(prevState => ({
+      participants: prevState.participants + 1
+    }));
+  }
+
   render() {
-    const { events } = this.state;
+    const { events, participants } = this.state;
     const start = new Date(events.start);
 
     if (!this.state.events) {
@@ -34,9 +43,10 @@ export default class EventDetails extends React.Component {
           <div>
             <p><i className="fas fa-tram ml-3"></i>{events.resortName}</p>
             <p><i className="fas fa-calendar-day ml-3"></i>{start.toDateString()}</p>
-            <button className="btn-eventdetail mb-1">request to join</button>
+            <button onClick={this.handleClick} className="btn-eventdetail mb-1">request to join</button>
             <div className="eventdetaildesc mt-1">
               <p>{events.eventDescription}</p>
+              <div><p>Shredders : {participants}</p></div>
             </div>
           </div>
 

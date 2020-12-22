@@ -38,7 +38,7 @@ export default class ResortList extends React.Component {
     return (
 
       <div className="resort-list-page">
-        <h4>Resort Lists</h4>
+        <h4 className="text-center">Resort Lists</h4>
         {this.resortLists()}
       </div>
 
