@@ -36,13 +36,13 @@ export default class HostPage extends React.Component {
           <div className="text-center mt-2">
             <button onClick={this.handleClick} className="btn-detail ml-1">delete</button>
           </div>
-          <div className="mt-2 container">
+          <div className="mt-2 text-center mx-2">
             <img className="host-img" src={resortImg} />
-            <div className="d-flex">
+            <div className="text-center mx-2">
               <h2>{resortName}</h2>
-              <div className="ml-5">
-                <h4>{start.toDateString()}</h4>
-                <h4>{end.toDateString()}</h4>
+              <div className="m-auto">
+                <h4> start : {start.toDateString()}</h4>
+                <h4>end : {end.toDateString()}</h4>
               </div>
             </div>
             <div>

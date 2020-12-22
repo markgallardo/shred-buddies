@@ -25,6 +25,7 @@ export default class AddEvent extends React.Component {
           resort: resort
         }))
       .catch(err => console.error(err));
+
   }
 
   handleChange(event) {
@@ -52,8 +53,8 @@ export default class AddEvent extends React.Component {
     }
 
     return (
-      <div className="container add-event">
-        <form>
+      <div className="add-event">
+        <form className="mx-3">
           <div className="form-group">
             <label htmlFor="exampleFormControlInput1"><h3 className="mt-2">Add Event</h3></label>
             <select className="ml-4" onChange ={this.handleChange} id={this.state.resortId} name="resortId" >
@@ -64,7 +65,7 @@ export default class AddEvent extends React.Component {
             </select>
           </div>
           <div className="d-flex">
-            <div className="">
+            <div className="form-group">
               <label>start date</label>
               <input onChange ={this.handleChange} value={this.state.startDate} name="startDate" type="date" className="form-control start-input" id="start-id" />
             </div>
