@@ -36,9 +36,6 @@ export default class EventList extends React.Component {
   }
 
   render() {
-  //   const events = this.state.events.map(event =>
-  //     <EventListItem key={event.eventId} event={event} />
-  //   );
 
     return (
 
@@ -58,6 +55,7 @@ export default class EventList extends React.Component {
         <div className="event-card">
           {this.eventList()}
           {/* {<EventListItem setView={this.props.setView}/>} */}
+
         </div>
       </div>
 
