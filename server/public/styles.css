@@ -63,13 +63,20 @@ h2 {
    font-size: 40px;
 }
 
-.create-form, .add-event, .event-detail, .main-page,  .resort-detail, .host, .profile-page{
+.create-form, .add-event, .event-detail,   .resort-detail, .host, .profile-page{
   background:#c9d6df;
   height: 100vh;
   width: 100%;
    font-family: 'Roboto', sans-serif;
    overflow: hidden;
+}
 
+.main-page {
+   background:#c9d6df;
+  height:100vh;
+  width: 100%;
+   font-family: 'Roboto', sans-serif;
+   overflow: scroll;
 
 
 }

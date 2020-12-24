@@ -24,11 +24,7 @@ export default class EventList extends React.Component {
   eventList() {
     const list = this.state.events.map(event =>
       <EventListItem key={event.eventId} events={event} setView={this.props.setView}/>);
-    return (
-      <>
-        {list}
-      </>
-    );
+    return list;
   }
 
   componentDidMount() {
