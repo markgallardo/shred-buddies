@@ -113,6 +113,7 @@ app.get('/api/event/:eventId', (req, res, next) => {
       }
     });
 });
+
 app.get('/api/events', (req, res, next) => {
   const sql = `
   select "e"."eventId",

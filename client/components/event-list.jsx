@@ -54,7 +54,6 @@ export default class EventList extends React.Component {
         </ul>
         <div className="event-card">
           {this.eventList()}
-          {/* {<EventListItem setView={this.props.setView}/>} */}
 
         </div>
       </div>
