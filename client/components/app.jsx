@@ -109,7 +109,11 @@ export default class App extends React.Component {
     let view = <>
 
       <Header setView={this.setView} />
-      <AddEvent setView={this.setView} createEvent={this.createEvent} resort={this.state.resort} params={this.state.view.params} />
+      <AddEvent
+        setView={this.setView}
+        createEvent={this.createEvent}
+        resort={this.state.resort}
+        params={this.state.view.params} />
     </>;
     // <>
     //   <Header setView={this.setView} />
@@ -162,13 +166,20 @@ export default class App extends React.Component {
       view =
         <>
           <Header setView={this.setView} />
-          <EventDetails setView={this.setView} params={this.state.view.params} />
+          <EventDetails
+            setView={this.setView}
+            params={this.state.view.params}
+            event={this.state.user2} />
         </>;
     } else if (this.state.view.name === 'host') {
       view =
         <>
           <Header setView={this.setView} />
-          <HostPage setView={this.setView} params={this.state.view.params} event={this.state.user2} deleteEvent={this.deleteEvent} />
+          <HostPage
+            setView={this.setView}
+            params={this.state.view.params}
+            event={this.state.user2}
+            deleteEvent={this.deleteEvent} />
         </>;
 
     }
