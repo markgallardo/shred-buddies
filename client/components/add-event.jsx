@@ -51,12 +51,13 @@ export default class AddEvent extends React.Component {
     if (!this.state.resort) {
       return null;
     }
-
+    // console.log(this.props.params);
     return (
       <div className="add-event">
         <form className="mx-3">
           <div className="form-group">
             <label htmlFor="exampleFormControlInput1"><h3 className="mt-2">Add Event</h3></label>
+
             <select className="ml-4" onChange ={this.handleChange} id={this.state.resortId} name="resortId" >
               <option> select mountain</option>
               <option value="1">mammoth</option>
