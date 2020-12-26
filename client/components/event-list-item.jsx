@@ -4,7 +4,7 @@ export default function EventListItem(props) {
 
   function handleClick() {
     // if (this.state.events) {
-    props.setView('eventDetails', { eventsId: props.events.eventId });
+    props.setView('eventDetails', { events: props.events });
     // }
   }
 
