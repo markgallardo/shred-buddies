@@ -30,7 +30,7 @@ Try the live application at
 
     ```shell
     git clone https://github.com/jason-gonzales/shred-buddies.git
-    cd wicked-sales-js
+    cd shred-buddies
     ```
 
 1. Install all dependencies with NPM.
