@@ -19,7 +19,8 @@ export default class ResortList extends React.Component {
   }
 
   resortLists() {
-    const list = this.state.resorts.map(resort => <ResortListItem key={resort.resortId} setView={this.props.setView} resorts={resort}/>);
+    const list = this.state.resorts.map(resort =>
+      <ResortListItem key={resort.resortId} setView={this.props.setView} resorts={resort}/>);
 
     return (
       <>
@@ -38,7 +39,7 @@ export default class ResortList extends React.Component {
     return (
 
       <div className="resort-list-page">
-        <h4>Resort Lists</h4>
+        <h4 className="text-center">Resort Lists</h4>
         {this.resortLists()}
       </div>
 

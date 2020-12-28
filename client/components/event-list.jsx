@@ -8,14 +8,34 @@ export default class EventList extends React.Component {
     this.state = {
       events: []
     };
+    this.getEvents = this.getEvents.bind(this);
+    this.eventList = this.eventList.bind(this);
+  }
+
+  getEvents() {
+    fetch('/api/events')
+      .then(res => res.json())
+      .then(data => this.setState({
+        events: data
+      }))
+      .catch(err => console.error(err));
+  }
+
+  eventList() {
+    const list = this.state.events.map(event =>
+      <EventListItem key={event.eventId} events={event} setView={this.props.setView}/>);
+
+    return list;
+  }
+
+  componentDidMount() {
+    this.getEvents();
   }
 
   render() {
-    // const events = this.state.events.map(event =>
-    //   <EventListItem key={event.eventId} event={event} />
-    // );
 
     return (
+
       <div className="main-page">
         <ul className="nav">
           <li className="nav-item">
@@ -29,10 +49,12 @@ export default class EventList extends React.Component {
           </li>
 
         </ul>
-        <div>
-          {<EventListItem setView={this.props.setView}/>}
+        <div className="event-card">
+          {this.eventList()}
+
         </div>
       </div>
+
     );
   }
 }

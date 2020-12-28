@@ -1,4 +1,8 @@
-
+/* * {
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+} */
 header {
   height: 5rem;
   background: #52616b;
@@ -12,8 +16,23 @@ header {
   font-weight: bolder;
   color: #f0f5f9;
   text-shadow: 5px 5px 5px #52616b;
+  line-height: 1.6;
+  letter-spacing: 2.5px;
 }
-
+.home-title {
+   font-family: 'Rock Salt', cursive;
+  font-weight: bolder;
+  color: #f0f5f9;
+  /* text-shadow: 5px 5px 5px #52616b; */
+  line-height: 1.6;
+  letter-spacing: 2.5px;
+  position: fixed;
+  top:20%;
+}
+.home-btn {
+  position: fixed;
+  top:40%;
+}
 
 .fa-snowboarding,.fa-newspaper, .fa-bell {
   color: #f0f5f9;
@@ -33,6 +52,7 @@ h2 {
   height: 150px;
   max-width: 150px;
   border-radius: 50%;
+  background-size: cover;
 }
 
 
@@ -43,11 +63,20 @@ h2 {
    font-size: 40px;
 }
 
-.create-form, .add-event, .event-detail, .main-page,  .resort-detail, .host, .profile-page{
+.create-form, .add-event, .event-detail,   .resort-detail, .host, .profile-page{
   background:#c9d6df;
-  height: 670px;
+  height: 100vh;
+  width: 100%;
    font-family: 'Roboto', sans-serif;
    overflow: hidden;
+}
+
+.main-page {
+   background:#c9d6df;
+  height:100vh;
+  width: 100%;
+   font-family: 'Roboto', sans-serif;
+   overflow: scroll;
 
 
 }
@@ -56,18 +85,22 @@ h2 {
   background:#c9d6df;
   height: 670px;
   position: fixed;
+  height: 100vh;
+  width: 100%;
+
 
 }
 .resort-list-item-card {
   background: #f0f5f9;
+  box-shadow: 5px 10px;
 }
 
 
 
-.btn-detail{
+.btn-detail, .btn-eventdetail{
   background-color: #52616b;
   color: #f0f5f9;
-  border-radius: 10px;
+  border-radius: 16px;
   width: 250px;
   height: 40px;
    font-family: 'Roboto', sans-serif;
@@ -97,6 +130,10 @@ font-size: 15px;
 
 .event-img {
   filter: brightness(50%);
+  box-shadow: 5px 10px;
+  object-fit: cover;
+  height: 150px;
+  width: 100%;
 }
 
 .add-event {
@@ -108,17 +145,27 @@ font-size: 15px;
 }
 
 
-.homePage{
+.homepage-container{
 
-  width: 375px;
-  height: 667px;
+  width: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
-  background-image: url(images/equipment-wanaka-snowboard-youth.jpg);
-  background-repeat: round;
+  background: url(images/shred-buds.jpg) no-repeat center ;
   background-size: cover;
-  position: fixed;
+
+
+
 }
+
+/* .homepage-overlay {
+  position:fixed;
+  height: 100%;
+  width:100%;
+  background-color:#c9d6df;
+  opacity: 40%;
+  z-index:0;
+} */
 
 .container{
  margin-top: 0;
@@ -139,16 +186,29 @@ width:350px;
   -webkit-text-stroke: 1px #52616b;
 }
 
-.btn-eventdetail{
+/* .btn-eventdetail{
   background-color: #52616b;
   color: #f0f5f9;
   border-radius: 10px;
   width: 150px;
   height: 30px;
    font-family: 'Roboto', sans-serif;
-}
+} */
 
 .profile-info{
   background-color: #f0f5f9;
+  box-shadow: 5px 10px;
+}
 
+.event-card {
+  height: 150px;
+}
+
+.detail-title {
+  font-size: 30px;
+}
+
+.boarder {
+  font-size: 20px;
+  color: #212529;
 }

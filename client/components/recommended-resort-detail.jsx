@@ -32,11 +32,15 @@ export default class RecommendedResortDetail extends React.Component {
       return null;
     }
     return (
-      <div className="row justify-content-center resort-detail">
-        <div className="col-11 d-flex flex-wrap border">
-          <h4><i className="fas fa-chevron-left" onClick={() => this.props.setView('resortList', {})}></i> {this.state.resort.name}</h4>
-          <p className="mt-n4"> { this.state.resort.address}</p>
-          <p className="mt-n3">{this.state.resort.description}</p>
+
+      <div className="justify-content-center resort-detail">
+        <div className="d-flex flex-wrap">
+          <div className="mb-3 mx-2">
+            <h4><i className="fas fa-chevron-left"
+              onClick={() => this.props.setView('resortList', {})}></i> {this.state.resort.name}</h4>
+          </div>
+          <p className="mt-n4 mx-2 mb-3"> { this.state.resort.address}</p>
+          <p className="mt-n3 mx-2 py-2">{this.state.resort.description}</p>
           <div className="ml-5 m-auto">
             <img src={this.state.resort.imgUrl} alt="" className="img-detail mt-n3"/>
           </div>

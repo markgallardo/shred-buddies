@@ -113,6 +113,7 @@ app.get('/api/event/:eventId', (req, res, next) => {
       }
     });
 });
+
 app.get('/api/events', (req, res, next) => {
   const sql = `
   select "e"."eventId",
@@ -129,7 +130,7 @@ app.get('/api/events', (req, res, next) => {
     `;
   db.query(sql)
     .then(result => {
-      res.status(200).json(result.rows[0]);
+      res.status(200).json(result.rows);
     });
 
 });

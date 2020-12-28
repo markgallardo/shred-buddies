@@ -18,16 +18,17 @@ class Profile extends React.Component {
     return (
 
       <div className="profile-page">
-        <h2 className="ml-2 my-2">Profile</h2>
+        <h2 className="ml-2 my-2 text-center">Profile</h2>
         <div className="d-flex mb-3 mt-n2">
           <img className="profile-pic m-auto" src={imgUrl} />
         </div>
-        <div className="card-body profile-info">
-          <h2 className="m-auto">{name}</h2>
-          <p className="email">{email}</p>
+        <h2 className="m-auto text-center">{name}</h2>
+        <p className="email text-center">{email}</p>
+        <div className="card-body profile-info col-11 m-auto">
+
           <h4 className="skill">level: {skill}</h4>
           <div>
-            <h5 className="description">{description}</h5>
+            <h5 className="description">about: {description}</h5>
           </div>
         </div>
       </div>
