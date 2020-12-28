@@ -23,7 +23,7 @@ header {
    font-family: 'Rock Salt', cursive;
   font-weight: bolder;
   color: #f0f5f9;
-  text-shadow: 5px 5px 5px #52616b;
+  /* text-shadow: 5px 5px 5px #52616b; */
   line-height: 1.6;
   letter-spacing: 2.5px;
   position: fixed;
@@ -97,10 +97,10 @@ h2 {
 
 
 
-.btn-detail{
+.btn-detail, .btn-eventdetail{
   background-color: #52616b;
   color: #f0f5f9;
-  border-radius: 10px;
+  border-radius: 16px;
   width: 250px;
   height: 40px;
    font-family: 'Roboto', sans-serif;
@@ -158,14 +158,14 @@ font-size: 15px;
 
 }
 
-.homepage-overlay {
+/* .homepage-overlay {
   position:fixed;
   height: 100%;
   width:100%;
   background-color:#c9d6df;
   opacity: 40%;
   z-index:0;
-}
+} */
 
 .container{
  margin-top: 0;
@@ -186,14 +186,14 @@ width:350px;
   -webkit-text-stroke: 1px #52616b;
 }
 
-.btn-eventdetail{
+/* .btn-eventdetail{
   background-color: #52616b;
   color: #f0f5f9;
   border-radius: 10px;
   width: 150px;
   height: 30px;
    font-family: 'Roboto', sans-serif;
-}
+} */
 
 .profile-info{
   background-color: #f0f5f9;
@@ -202,4 +202,13 @@ width:350px;
 
 .event-card {
   height: 150px;
+}
+
+.detail-title {
+  font-size: 30px;
+}
+
+.boarder {
+  font-size: 20px;
+  color: #212529;
 }

@@ -28,7 +28,7 @@ export default class AddEvent extends React.Component {
 
   }
 
-  handleChange(event) {
+  handleChange(events) {
     const input = event.target.name;
     const value = event.target.value;
     const newState = {};
@@ -48,16 +48,17 @@ export default class AddEvent extends React.Component {
   }
 
   render() {
+    // console.log(this.props.params.resortId);
     if (!this.state.resort) {
       return null;
     }
-    // console.log(this.props.params);
+
     return (
       <div className="add-event">
         <form className="mx-3">
           <div className="form-group">
             <label htmlFor="exampleFormControlInput1"><h3 className="mt-2">Add Event</h3></label>
-
+            {/* <input onChange={this.handleChange} value={this.props.params.resortId}>{this.props.params.resortId}</input> */}
             <select className="ml-4" onChange ={this.handleChange} id={this.state.resortId} name="resortId" >
               <option> select mountain</option>
               <option value="1">mammoth</option>
@@ -76,7 +77,7 @@ export default class AddEvent extends React.Component {
             </div>
           </div>
           <div className="form-group mt-2">
-            <label htmlFor="exampleFormControlSelect1">how many shreders</label>
+            <label htmlFor="exampleFormControlSelect1">how many shredders</label>
             <select onChange ={this.handleChange} value={this.state.profileId} name= "profileId" className="form-control" id="exampleFormControlSelect1">
               <option>1</option>
               <option>2</option>
