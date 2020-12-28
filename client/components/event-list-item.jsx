@@ -19,7 +19,7 @@ export default function EventListItem(props) {
           <h5 className="card-title">{props.events.resortName}</h5>
           <p className="mt-n2">starts: {start.toDateString()}</p>
           <p className="mt-n4">ends: {end.toDateString()}</p>
-          <p className="card-text mt-n2">{props.events.eventDescription}</p>
+          <p className="card-text my-2">{props.events.eventDescription}</p>
 
         </div>
       </div>

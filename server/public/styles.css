@@ -132,7 +132,7 @@ font-size: 15px;
   filter: brightness(50%);
   box-shadow: 5px 10px;
   object-fit: cover;
-  height: 150px;
+  /* height: 150px; */
   width: 100%;
 }
 
@@ -200,9 +200,6 @@ width:350px;
   box-shadow: 5px 10px;
 }
 
-.event-card {
-  height: 150px;
-}
 
 .detail-title {
   font-size: 30px;
@@ -212,3 +209,5 @@ width:350px;
   font-size: 20px;
   color: #212529;
 }
+
+
