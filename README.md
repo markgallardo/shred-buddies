@@ -23,9 +23,7 @@ Try the live application at
 * User can create an event - Front End.
 * User can view list of events - Front End.
 # Preview
-  <p align="center">
-    <img src="./doc-images/shred-bud1.gif">
-  </p>
+![Watch the Video](https://github.com/jason-gonzales/shred-buddies-js/raw/main/doc-images/shred-bud1.gif)
 
 #### Getting Started
 
