@@ -23,4 +23,26 @@ Try the live application at
 * User can create an event - Front End.
 * User can view list of events - Front End.
 # Preview
-![Watch the Video](https://github.com/jason-gonzales/shred-buddies/raw/main/doc-images/shred-bud1.gif)
+![Watch the Video](https://github.com/mark-gallardo/shred-buddies/raw/main/doc-images/shred-bud1.gif)
+#### Getting Started
+
+1. Clone the repository.
+
+    ```shell
+    git clone https://github.com/jason-gonzales/shred-buddies.git
+    cd wicked-sales-js
+    ```
+
+1. Install all dependencies with NPM.
+
+    ```shell
+    npm install
+    ```
+
+1. Run the webpack development server.
+
+    ```shell
+    npm run dev
+    ```
+
+1. Once started you can view the application by opening http://localhost:3000 in your browser.
