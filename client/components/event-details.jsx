@@ -36,24 +36,26 @@ export default class EventDetails extends React.Component {
       );
     } else {
       return (
-        <div className ="event-detail">
+        <div className="event-detail">
           <div className="container">
             <div className=" m-0 justify-content-center">
-              <img src={events.resortImage} alt={events.resortName} className="imgEventDetails mt-3"/>
+              <img src={events.resortImage} alt={events.resortName} className="imgEventDetails mt-3" />
             </div>
             <div>
-              <p><i className="fas fa-tram"></i>{events.resortName}</p>
+              <div className="detail-title"> <p><i className="fas fa-tram"></i>{events.resortName}</p></div>
               <p><i className="fas fa-calendar-day"></i> Start : {start.toDateString()}</p>
               <p><i className="fas fa-calendar-day"></i> End : {end.toDateString()}</p>
-              <button onClick={this.handleClick} className="btn-eventdetail mb-1">request to join</button>
-              <div className="eventdetaildesc mt-1">
-                <p>{events.eventDescription}</p>
-                <div><p>Shredders : {this.state.participants}</p></div>
-              </div>
-            </div>
+              <p><i className="fas fa-snowboarding boarder"></i> Shredders : {this.state.participants}</p></div>
+            <div className="eventdetaildesc mt-1">
+              <p>{events.eventDescription}</p>
 
+              <div className="text-center">
+                <button onClick={this.handleClick} className="btn-eventdetail mb-1">request to join</button></div>
+            </div>
           </div>
+
         </div>
+
       );
     }
   }
