@@ -28,7 +28,6 @@ export default class App extends React.Component {
       resort: null,
       user2: null,
       events: null
-
     };
     this.setView = this.setView.bind(this);
     this.setUser = this.setUser.bind(this);
@@ -109,16 +108,8 @@ export default class App extends React.Component {
     let view = <>
 
       <Header setView={this.setView} />
-      <AddEvent
-        setView={this.setView}
-        createEvent={this.createEvent}
-        resort={this.state.resort}
-        params={this.state.view.params} />
+      <AddEvent setView={this.setView} createEvent={this.createEvent} resort={this.state.resort} params={this.state.view.params} />
     </>;
-    // <>
-    //   <Header setView={this.setView} />
-    //   <HostPage setView='host' event={this.state.user2} setUser2={this.setUser2}/>
-    // </>;
 
     if (this.state.view.name === 'home') {
       view = <Homepage setView={this.setView} />;
@@ -134,7 +125,7 @@ export default class App extends React.Component {
       view =
         <>
           <Header setView={this.setView} />
-          <EventList setView={this.setView} event={this.state.user} />
+          <EventList setView={this.setView} event={this.state.user} />;
 
         </>;
     } else if (this.state.view.name === 'resortList') {
@@ -166,20 +157,13 @@ export default class App extends React.Component {
       view =
         <>
           <Header setView={this.setView} />
-          <EventDetails
-            setView={this.setView}
-            params={this.state.view.params}
-            event={this.state.user2} />
+          <EventDetails setView={this.setView} params={this.state.view.params} />
         </>;
     } else if (this.state.view.name === 'host') {
       view =
         <>
           <Header setView={this.setView} />
-          <HostPage
-            setView={this.setView}
-            params={this.state.view.params}
-            event={this.state.user2}
-            deleteEvent={this.deleteEvent} />
+          <HostPage setView={this.setView} params={this.state.view.params} event={this.state.user2} deleteEvent={this.deleteEvent} />
         </>;
 
     }

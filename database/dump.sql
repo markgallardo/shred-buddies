@@ -207,86 +207,12 @@ COPY public.atendees ("profileId", "eventId", "isConfirmed", "isCheckedIn") FROM
 --
 
 COPY public.event ("eventId", description, "resortId", "profileId", "startDate", "endDate") FROM stdin;
-
-4	hello there	1	2	2020-11-10	2020-11-15
-12	asdfasfd	1	0	2020-11-12	2020-11-14
-13	hello mark	1	0	2020-11-28	2020-11-29
-15	fadfsad	2	2	2020-11-11	2020-11-19
-16	fsadfsadfasdf	2	6	2020-11-17	2020-11-24
-17	asdfasdfsa	1	6	2020-11-15	2020-11-17
-18	it is saturday night	1	5	2020-11-22	2020-11-23
-19	dsgfadg	1	6	2020-11-24	2020-11-24
-20	dasdfasdf	1	6	2020-11-17	2020-11-19
-21	re	1	7	2020-11-24	2020-11-25
-22	dfasdfsadf	1	6	2020-11-17	2020-11-25
-23	fasdfsaf	1	5	2020-11-15	2020-11-17
-24	dsafsaf	1	6	2020-11-17	2020-11-17
-25	yo yo	1	2	2020-11-01	2020-11-02
-26	afasdfafdafdas	1	3	2020-11-17	2020-11-18
-27	dasdfasdf	1	6	2020-11-17	2020-11-25
-28	dadsfsadfs	1	2	2020-11-17	2020-11-27
-29	lollllllllllll	1	6	2020-11-24	2020-11-24
-30	qqqqqqqqqqqqqqq	1	2	2020-11-17	2020-11-20
-31	dfgadfadgds	1	6	2020-11-17	2020-11-24
-32	eqtrewrteqrte	1	6	2020-11-17	2020-11-20
-33	dfasdfs	1	6	2020-11-10	2020-11-11
-34	adfgdgfd	1	6	2020-11-17	2020-11-24
-35	fadsf	1	6	2020-11-24	2020-11-18
-36	dasfsadf	1	5	2020-11-24	2020-11-24
-37	vbczb	1	6	2020-11-24	2020-11-24
-38	dfasdfsadfsadfsadfsadfsafsadfsafsa	1	6	2020-11-24	2020-11-25
-39	dadadsf	1	6	2020-11-24	2020-11-25
-40	sfhrh	1	6	2020-11-23	2020-11-24
-41	i like to eat fried chicken	1	6	2020-11-02	2020-11-04
-42	dadfadf	1	6	2020-11-24	2020-11-24
-43	dasdfad	2	6	2020-11-23	2020-11-25
-44	fasdfasdf	1	5	2020-11-16	2020-11-17
-45	dadfasdfa	1	6	2020-11-17	2020-11-19
-46	dadsfasdfasfda	1	6	2020-11-24	2020-11-24
-47	fffffffffffffffffffffffffff	1	6	2020-11-17	2020-11-24
-48	dfasdfasdfasdfasdfasdfa	1	6	2020-11-17	2020-12-01
-49	i like fried chicken	1	6	2020-11-24	2020-11-24
-50	ooooooooooooooooooooo	1	3	2020-11-17	2020-11-26
-51	99999999999999999999999999999	1	6	2020-11-30	2020-12-04
-52	xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx	1	7	2020-11-17	2020-12-02
-53	first thing in the morning	1	3	2020-11-16	2020-11-19
-54	gdsasdfadsfdf	1	6	2020-11-17	2020-11-17
-55	dasdfadsf	1	5	2020-11-17	2020-11-17
-56	lkjlklkl	2	3	2020-11-17	2020-11-18
-57	sdfg	2	5	2020-11-17	2020-11-19
-58	dsafsadf	2	3	2020-11-16	2020-11-17
-59	sdafsadf	2	6	2020-11-17	2020-11-18
-61	dsfsadfasfdf	1	6	2020-11-17	2020-11-19
-62	adsfsadfsadfsadfsadfsafdsafdsadfsaf	1	6	2020-11-16	2020-11-17
-63	lllll	1	5	2020-11-17	2020-11-17
-64	dsfds	1	5	2020-11-16	2020-11-18
-65	pppppp	1	6	2020-11-17	2020-11-17
-66	qqqq	1	6	2020-11-16	2020-11-17
-67	qqqq	1	5	2020-11-17	2020-11-19
-68	cdfdf	1	5	2020-11-17	2020-11-18
-69	qqqqq	1	6	2020-11-17	2020-11-17
-70	vvvvv	1	5	2020-11-17	2020-11-19
-71	uuuu	1	6	2020-11-24	2020-11-20
-72	vvvv	1	5	2020-11-17	2020-11-20
-73	qqqq	2	6	2020-11-18	2020-11-20
-74	ssss	2	5	2020-11-17	2020-11-19
-75	q22	1	5	2020-11-17	2020-11-19
-76	bbb	1	6	2020-11-17	2020-11-19
-77	dfafd	1	6	2020-11-17	2020-11-17
-78	qqq	1	6	2020-11-17	2020-11-21
-79	bbbbb	2	5	2020-11-18	2020-11-20
-80	bbbbbbb	1	5	2020-11-17	2020-11-19
-81	sadfsfd	1	6	2020-11-17	2020-11-17
-82	dfasdf	1	6	2020-11-16	2020-11-17
-83	sadfsfd	2	6	2020-11-17	2020-11-25
-84	wwwww	1	6	2020-11-17	2020-11-19
-85	bbbbbbb	2	5	2020-11-17	2020-11-19
-86	gadsdfasdf	1	5	2020-11-24	2020-11-24
-87	werwrew	1	6	2020-11-17	2020-11-17
-88	bbb	1	5	2020-11-17	2020-11-18
-100	gg	1	5	2020-11-17	2020-11-26
-105	We would like to leave first thing in the morning.	1	5	2020-11-16	2020-11-18
-
+163	we are excited!	3	9	2020-12-29	2020-12-31
+164	next year will be a better year	3	6	2021-01-06	2021-01-07
+165	I miss shredding	1	9	2020-12-29	2021-01-01
+166	2020 has been a crazy year!	1	5	2020-12-29	2021-01-01
+167	lol	2	3	2020-12-14	2020-12-18
+168	what is going on	3	10	2021-01-04	2021-01-07
 \.
 
 
@@ -302,7 +228,6 @@ COPY public.profile ("profileId", name, email, skill, "imgUrl", description) FRO
 5	mark	someemail	beginner	https://static.wikia.nocookie.net/starwars/images/4/48/Chewbacca_TLJ.png/revision/latest?cb=20190830144754	i like bunny slope
 6	mark	someemail	beginner	https://static.wikia.nocookie.net/starwars/images/4/48/Chewbacca_TLJ.png/revision/latest?cb=20190830144754	i like bunny slope
 8	jason	jason25@gmail.com	intermediate	https://image.cnbcfm.com/api/v1/image/101524695-457220551.jpg?v=1395781183&w=1400&h=950	I also like bunny slopes
-
 9	Jason Gonzales	jasongonzo25@gmail.com	expert	dfadf	dfdfasfasdf
 10	Kobe Bryant	jasongonzo25@gmail.com	beginner	dfadf	dfasfd
 11	Jason Gonzales	jasongonzo25@gmail.com	expert	img url	frffff
@@ -359,7 +284,85 @@ COPY public.profile ("profileId", name, email, skill, "imgUrl", description) FRO
 62	Jason Gonzales	jasongonzo25@gmail.com	beginner	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	I love coding and snowboarding at the same time.
 63	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	cccc
 64	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	vvvv
-
+65	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	asdfasdfa
+66	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	ffff
+67	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	ooooo
+68	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	l
+69	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	fdfdf
+70	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	dfsdf
+71	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	dasfd
+72	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	adfdsf
+73	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	adsfadsf
+74	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	I love coding and snowboarding
+75	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	I love babyshee
+76	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	I love to code and snowboard
+77	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	ffdfdf
+78	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	dfasdfd
+79	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type spec
+80	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unch
+81	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unch
+99	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	https://ca.slack-edge.com/T1EHQUJ8J-U016NP1639T-9d2bb904061b-512
+82	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unch
+83	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unch
+84	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unch
+85	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unch
+86	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unch
+87	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unch
+88	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unch
+89	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unch
+90	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://ca.slack-edge.com/T1EHQUJ8J-U016NP1639T-9d2bb904061b-512	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen boo
+91	Sunday	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	dfafdsadfasdfsafd
+92	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	      console.log('this.props.profile',this.props.profile)\n
+93	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen boo
+94	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	   console.log('this.props.profile', this.props.profile);
+95	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	    console.log('this.props.profile', this.props.profile);
+96	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	    console.log('this.props.profile', this.props.profile);
+97	Steph	curry@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen boo
+98	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://ca.slack-edge.com/T1EHQUJ8J-U016NP1639T-9d2bb904061b-512	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen boo
+100	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	I love to code and snowboard on the weekends
+101	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-77f7d0cee7ba-512	i love to code and snowboard
+102	Jason Gonzales	jasongonzo25@gmail.com	beginner	https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-77f7d0cee7ba-512	i love snowboarding and coding
+103	Jason Gonzales	jasongonzo25@gmail.com	intermediate		
+104	Jason Gonzales	jasongonzo25@gmail.com	beginner	https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-77f7d0cee7ba-512	i love coding and snowboarding
+105	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	I like to board and code
+106	Jason Gonzales	jasongonzo25@gmail.com	expert		
+107	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	I love to eat
+108	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	
+109	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	dsfsafdasd
+110				https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	
+111				https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	
+112	Jason Gonzales	jasongonzo25@gmail.com		https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	
+113	Jason Gonzales	jasongonzo25@gmail.com			
+114	Jason Gonzales	jasongonzo25@gmail.com			
+115	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	dfadsfafd
+116	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	dsafsadf
+117	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	i like to eat
+118	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	dafd
+119	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	adfasdfasdfsadf
+120	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in
+121	Jason Gonzales	jasongonzo25@gmail.com	expert	asdfsaf	
+122	Jason Gonzales	jasongonzo25@gmail.com	beginner	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	
+123	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	dadasfadsfsadfsadf
+124	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	dafdasdf
+125	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	dafdadfadsf
+126	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	I like to eat and snowboard. Then on my free time I like to code.
+127				https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	
+128				https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-92382557d5b7-512	
+129	Jason Gonzales	jasongonzo25@gmail.com	expert	https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-92382557d5b7-512	hello there team
+130	Jason Gonzales	jasongonzo25@gmail.com	expert	https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-92382557d5b7-512	dafdadsfadf
+131	Jason Gonzales	jasongonzo25@gmail.com	expert	https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-92382557d5b7-512	lets go shred and eat
+132	Jason Gonzales	jasongonzo25@gmail.com		https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-92382557d5b7-512	
+133	Jason Gonzales	jasongonzo25@gmail.com	expert	https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-92382557d5b7-512	24242424242424
+134	Jason Gonzales	jasongonzo25@gmail.com	expert	https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-92382557d5b7-512	adfsadfas
+135	Jason Gonzales	jasongonzo25@gmail.com	expert	https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-92382557d5b7-512	I like boarding and food and coding!!!
+136	Jason Gonzales	jasongonzo25@gmail.com	expert	https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-92382557d5b7-512	I like to eat a lot
+137	Jason Gonzales	jasongonzo25@gmail.com	expert	https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-92382557d5b7-512	i like to eat a lot
+138	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	its almost new years so I really wanna go snowboarding very soon.
+139	Jason Gonzales	jasongonzo25@gmail.com	expert	https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-92382557d5b7-512	helloooo
+140	Jason Gonzales	jasongonzo25@gmail.com	expert	https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-92382557d5b7-512	I like to eat a lot
+141	Jason Gonzales	jasongonzo25@gmail.com		https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-92382557d5b7-512	
+142	Jason Gonzales	jasongonzo25@gmail.com	expert	https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-92382557d5b7-512	its almost a new year
+143	Jason Gonzales	jasongonzo25@gmail.com	expert	https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-92382557d5b7-512	adfasdfafd
 \.
 
 
@@ -378,18 +381,14 @@ COPY public.resort ("resortId", name, address, description, "imgUrl") FROM stdin
 -- Name: event_eventId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-
-SELECT pg_catalog.setval('public."event_eventId_seq"', 105, true);
-
+SELECT pg_catalog.setval('public."event_eventId_seq"', 168, true);
 
 
 --
 -- Name: profile_profileId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-
-SELECT pg_catalog.setval('public."profile_profileId_seq"', 64, true);
-
+SELECT pg_catalog.setval('public."profile_profileId_seq"', 143, true);
 
 
 --
