@@ -38,7 +38,9 @@ export default class CreateProfile extends React.Component {
 
     return (
       <div className="create-form">
-        <header className="create-header d-flex justify-content-center align-items-center">SB</header>
+        <header className="d-flex justify-content-center align-items-center">
+          <h2 className="head-title">Shred Buddies</h2></header>
+
         <form className="container col-11">
           <div className="form-group">
             <label htmlFor="formGroupExampleInput"><h3 className="mt-2">Create Profile</h3></label>
