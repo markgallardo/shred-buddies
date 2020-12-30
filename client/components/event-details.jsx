@@ -39,7 +39,7 @@ export default class EventDetails extends React.Component {
         <div className="event-detail">
           <div className="container">
             <div className=" m-0 justify-content-center">
-              <img src={events.resortImage} alt={events.resortName} className="imgEventDetails mt-3" />
+              <img src={events.resortImage} alt={events.resortName} className="imgEventDetails" />
             </div>
             <div>
               <div className="detail-title"> <p><i className="fas fa-tram"></i>{events.resortName}</p></div>
