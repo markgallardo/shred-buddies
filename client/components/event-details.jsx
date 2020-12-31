@@ -36,7 +36,7 @@ export default class EventDetails extends React.Component {
       );
     } else {
       return (
-        <div className="event-detail">
+        <div className="event-detail pt-3">
           <div className="container">
             <div className=" m-0 justify-content-center">
               <img src={events.resortImage} alt={events.resortName} className="imgEventDetails" />
