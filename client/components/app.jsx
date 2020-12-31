@@ -19,7 +19,7 @@ export default class App extends React.Component {
     this.state = {
       view: {
 
-        name: 'home',
+        name: 'main',
 
         params: {}
       },
@@ -106,6 +106,7 @@ export default class App extends React.Component {
   }
 
   render() {
+
     let view = <>
 
       <Header setView={this.setView} />

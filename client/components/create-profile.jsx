@@ -27,7 +27,6 @@ export default class CreateProfile extends React.Component {
   handleClick(event) {
     event.preventDefault();
     this.props.createProfile(this.state);
-
     if (this.props.profile) {
       this.props.setView('profile', { profileId: this.props.profile });
     }
@@ -38,24 +37,53 @@ export default class CreateProfile extends React.Component {
 
     return (
       <div className="create-form">
-        <header className="d-flex justify-content-center align-items-center">
+        <header className="create-header d-flex justify-content-center align-items-center">
           <h2 className="head-title">Shred Buddies</h2></header>
 
         <form className="container col-11">
           <div className="form-group">
-            <label htmlFor="formGroupExampleInput"><h3 className="mt-2">Create Profile</h3></label>
-            <input onChange={this.handleChange} value={this.state.name} name="name" type="text" className="form-control mb-4" id="formGroupExampleInput" placeholder="name" />
-            <input onChange={this.handleChange} value={this.state.email} name="email" type="email" className="form-control mb-4 create-email" id="email-id" placeholder="email" />
-            <select onChange={this.handleChange} value={this.state.skill} name="skill" className="form-control mb-4">
+            <label htmlFor="formGroupExampleInput">
+              <h3 className="mt-2">Create Profile</h3>
+            </label>
+            <input onChange={this.handleChange}
+              value={this.state.name}
+              name="name"
+              type="text"
+              className="form-control mb-4"
+              id="formGroupExampleInput"
+              placeholder="name" />
+            <input onChange={this.handleChange}
+              value={this.state.email}
+              name="email" type="email"
+              className="form-control mb-4 create-email"
+              id="email-id" placeholder="email" />
+            <select onChange={this.handleChange}
+              value={this.state.skill}
+              name="skill"
+              className="form-control mb-4">
               <option>skill level</option>
               <option>beginner</option>
               <option>intermediate</option>
               <option>expert</option>
             </select>
-            <textarea onChange={this.handleChange} value ={this.state.description} name="description" className="form-control mb-4" placeholder="description of yourself" rows="7"></textarea>
-            <input onChange={this.handleChange} value={this.state.imgUrl} name="imgUrl" className="form-control file-path validate mb-4" type="text" placeholder="upload profile picture" />
+            <textarea
+              onChange={this.handleChange}
+              value={this.state.description}
+              name="description"
+              className="form-control mb-4"
+              placeholder="description of yourself"
+              rows="7"></textarea>
+            <input
+              onChange={this.handleChange}
+              value={this.state.imgUrl}
+              name="imgUrl"
+              className="form-control file-path validate mb-4"
+              type="text"
+              placeholder="upload profile picture" />
             <div className="text-center">
-              <button onClick={this.handleClick} className="btn-detail">create profile</button>
+              <button
+                onClick={this.handleClick}
+                className="btn-detail">create profile</button>
             </div>
           </div>
         </form>
