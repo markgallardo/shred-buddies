@@ -206,11 +206,6 @@ width:350px;
    font-family: 'Roboto', sans-serif;
 } */
 
-.profile-info{
-  background-color: #f0f5f9;
-  /* box-shadow: 5px 10px; */
-}
-
 
 .detail-title {
   font-size: 30px;
@@ -242,6 +237,8 @@ width:350px;
     position: fixed;
     z-index:12;
     width: 100%;
+    background-color: #3d474e
+
 }
 
 .nav-icon {
@@ -253,6 +250,23 @@ width:350px;
  padding-bottom: 60px;
 }
 
-.pic-box {
-  bottom: 11%;
+.pic-box, .name-box, .extra-box {
+  bottom: 10%;
+}
+
+@media only screen and (min-width: 768px) {
+  .pic-box, .name-box, .extra-box {
+  bottom: 5%;
+}
+}
+
+.content-container {
+  height: 80vh;
+ background-color: #f0f5f9;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  bottom:0;
+}
+.description {
+  color: grey;
 }
