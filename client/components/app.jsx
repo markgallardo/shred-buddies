@@ -12,6 +12,8 @@ import AddEvent from './add-event';
 import EventDetails from './event-details';
 import HostPage from './host-page';
 import Footer from './footer';
+import Login from './log-in';
+// import ProfileTwo from './profile-two';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -19,7 +21,7 @@ export default class App extends React.Component {
     this.state = {
       view: {
 
-        name: 'resortList',
+        name: 'login',
 
         params: {}
       },
@@ -34,6 +36,13 @@ export default class App extends React.Component {
     this.setUser = this.setUser.bind(this);
     this.createProfile = this.createProfile.bind(this);
     this.createEvent = this.createEvent.bind(this);
+    this.addUser = this.addUser.bind(this);
+  }
+
+  addUser(userName) {
+    this.setState({
+      user: userName
+    });
   }
 
   setUser(user) {
@@ -196,7 +205,15 @@ export default class App extends React.Component {
           <Footer setView={this.setView} />
         </>;
 
+    } else if (this.state.view.name === 'login') {
+      view =
+      <>
+        <Login setView={this.setView}
+          addUser={this.addUser}
+          createProfile={this.createProfile} />
+      </>;
     }
+
     return (
       <>
         {view}
