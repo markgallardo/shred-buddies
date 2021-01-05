@@ -38,11 +38,11 @@ export default class EventDetails extends React.Component {
       return (
         <div className="event-detail pt-3">
           <div className="container">
-            <div className=" m-0 justify-content-center">
+            <div className=" m-0 d-flex justify-content-center">
               <img src={events.resortImage} alt={events.resortName} className="imgEventDetails" />
             </div>
             <div>
-              <div className="detail-title"> <p><i className="fas fa-tram"></i>{events.resortName}</p></div>
+              <div className=" text-center detail-title"> <p><i className="fas fa-tram"></i>{events.resortName}</p></div>
               <p><i className="fas fa-calendar-day"></i> Start : {start.toDateString()}</p>
               <p><i className="fas fa-calendar-day"></i> End : {end.toDateString()}</p>
               <p><i className="fas fa-snowboarding boarder"></i> Shredders : {this.state.participants}</p></div>

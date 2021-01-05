@@ -83,6 +83,13 @@ h2 {
 
 
 }
+
+.login {
+  background:  #52616b;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+}
 .main-page {
    background:#c9d6df;
   height:100vh;
