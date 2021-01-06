@@ -136,9 +136,12 @@ export default class App extends React.Component {
       view =
         <>
           <Header setView={this.setView} />
-          <Profile setView={this.setView}
+          <Profile
+            setView={this.setView}
             params={this.state.view.params}
-            profile={this.state.user} setUser={this.setUser} />
+            profile={this.state.user}
+            addUser={this.addUser}
+            setUser={this.setUser} />
           <Footer setView={this.setView} />
         </>;
     } else if (this.state.view.name === 'main') {
@@ -207,11 +210,12 @@ export default class App extends React.Component {
 
     } else if (this.state.view.name === 'login') {
       view =
-      <>
-        <Login setView={this.setView}
-          addUser={this.addUser}
-          createProfile={this.createProfile} />
-      </>;
+        <>
+          <Login setView={this.setView}
+            addUser={this.addUser}
+            createProfile={this.createProfile}
+            params={this.state.view.params} />
+        </>;
     }
 
     return (

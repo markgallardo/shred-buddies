@@ -33,10 +33,10 @@ class Login extends React.Component {
       user: event.target.value,
       userId: parseInt(id)
     });
-    if (this.state.users) {
-      this.props.setView('profile', { profileId: this.state.users });
-    }
 
+    this.props.setView('profile', { profileId: this.state.users[0] });
+
+    // console.log(this.state.users[0]);
   }
 
   render() {
@@ -47,8 +47,8 @@ class Login extends React.Component {
         <div className="d-flex justify-content-center align-items-center pt-4">
           <select className="form-control-lg col-11 mt-3" onChange={this.handleChange} id={this.state.users} >
             <option className="col-9">Select User</option>
-            <option value="165" userId="1">Mark Gallardo</option>
-            <option value="164" userId="2">Jason Gonzales</option>
+            <option value="145" userId="1">Mark Gallardo</option>
+            <option value="144" userId="2">Jason Gonzales</option>
 
           </select>
         </div>

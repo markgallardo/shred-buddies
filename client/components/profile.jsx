@@ -4,15 +4,27 @@ class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      profile: null
+      profile: {}
     };
+    // this.getUserProfile = this.getUserProfile.bind(this);
   }
+
+  // componentDidMount() {
+  //   this.getUserProfile();
+  // }
+
+  // getUserProfile() {
+  //   fetch(`/api/profile/${this.props.params.profileId}`)
+  //     .then(res => res.json())
+  //     .then(data => console.log(data));
+  // }
 
   render() {
     // console.log(this.props.params.profileId);
+    // console.log(this.props.params.profileId.name);
     const { name, email, skill, description, imgUrl } = this.props.params.profileId;
     if (!this.props.params.profileId) {
-      return null;
+      return <div>negative</div>;
     }
     return (
       <div className="profile-page">
