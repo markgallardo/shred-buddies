@@ -4,7 +4,7 @@ class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: []
+      profiles: []
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -17,7 +17,7 @@ class Login extends React.Component {
     fetch('/api/profile')
       .then(res => res.json())
       .then(data => this.setState({
-        users: data
+        profiles: data
       }))
       .catch(err => console.error(err));
 
@@ -26,16 +26,14 @@ class Login extends React.Component {
   handleChange(event) {
     const index = event.target.selectedIndex;
     const selected = event.target.childNodes[index];
-    const id = selected.getAttribute('userId');
-    this.props.addUser({
-      user: event.target.value,
-      userId: parseInt(id)
-    });
+    const id = selected.getAttribute('profileId');
+    // this.props.addUser({
+    //   profile: event.target.value,
+    //   profileId: parseInt(id)
+    // });
 
-    // this.props.setView('profile', { profileId: this.state.users });
-    this.props.setView('profile', {});
-
-    // console.log(this.state.users);
+    this.props.setView('profile', { profileId: id });
+    // this.props.setView('profile', {profileId});
 
   }
 
@@ -47,8 +45,13 @@ class Login extends React.Component {
         <div className="d-flex justify-content-center align-items-center pt-4">
           <select className="form-control-lg col-11 mt-3" onChange={this.handleChange} id={this.state.users} >
             <option className="col-9">Select User</option>
-            <option value="145" userId="1">Mark Gallardo</option>
-            <option value="144" userId="2">Jason Gonzales</option>
+            {/* <option value="145" userId="1">Mark Gallardo</option>
+            <option value="144" userId="2">Jason Gonzales</option> */}
+            {this.state.profiles.map(profile => {
+              return (
+                <option key={profile.profileId} profileId={profile.profileId}>{profile.name}</option>
+              );
+            })}
 
           </select>
         </div>

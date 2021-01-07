@@ -41,7 +41,7 @@ export default class App extends React.Component {
 
   addUser(userName) {
     this.setState({
-      user: userName
+      profile: userName
     });
   }
 
@@ -76,7 +76,7 @@ export default class App extends React.Component {
     fetch('/api/profile', requestOption)
       .then(result => result.json())
       .then(data => this.setState({
-        view: { name: 'profile', params: {} },
+        view: { name: 'login', params: {} },
         profile: data.profileId,
         user: data
 

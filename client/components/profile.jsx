@@ -9,11 +9,15 @@ class Profile extends React.Component {
     // this.getUserProfile = this.getUserProfile.bind(this);
   }
 
-  // componentDidMount() {
-  //   fetch(`/api/profile/${this.props.params.profileId}`)
-  //     .then(res => res.json())
-  //     .then(data => console.log(data));
-  // }
+  componentDidMount() {
+    fetch(`/api/profile/${this.props.params.profileId}`)
+      .then(res => res.json())
+      .then(data =>
+        this.setState({
+          profile: data
+        }))
+      .catch(err => console.error(err));
+  }
 
   // getUserProfile() {
   //   fetch(`/api/profile/${this.props.params.profileId}`)
@@ -22,9 +26,9 @@ class Profile extends React.Component {
   // }
 
   render() {
-    // console.log(this.props.params.profileId);
-    const { name, email, skill, description, imgUrl } = this.props.params.profileId;
-    if (!this.props.params.profileId) {
+
+    const { name, email, skill, description, imgUrl } = this.state.profile;
+    if (!this.state.profile) {
       return (<div>No Entry</div>);
     } else {
       return (

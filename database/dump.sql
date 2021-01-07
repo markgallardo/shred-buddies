@@ -223,6 +223,11 @@ COPY public.event ("eventId", description, "resortId", "profileId", "startDate",
 COPY public.profile ("profileId", name, email, skill, "imgUrl", description) FROM stdin;
 144	Jason Gonzales	jasongonzo25@gmail.com	intermediate	https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-92382557d5b7-512	I like to eat chicken mc nuggets, snowboard all day, and code all night!
 145	Mark Justin Gallardo	mark@yahoo.com	expert	https://ca.slack-edge.com/T1EHQUJ8J-U016NP1639T-9d2bb904061b-512	I like to play video games all day and code all day also!
+146	Dot Keenan	keebology.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	They call me Steph Curry
+147	Kobe Bryant	kobee@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	I am the GOAT
+148	Kobeeee	byant.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	im the goat 
+149	Steph Curry	curry.com	expert	https://ca.slack-edge.com/T1EHQUJ8J-U01553CD1HS-92382557d5b7-512	I like to shot a lot of threes
+150	Jason Gonzales	jasongonzo25@gmail.com	expert	https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200824175931-kobe-bryant-file.jpg	hellooo there mark
 \.
 
 
@@ -248,7 +253,7 @@ SELECT pg_catalog.setval('public."event_eventId_seq"', 168, true);
 -- Name: profile_profileId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."profile_profileId_seq"', 145, true);
+SELECT pg_catalog.setval('public."profile_profileId_seq"', 150, true);
 
 
 --
