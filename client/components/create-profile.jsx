@@ -29,6 +29,7 @@ export default class CreateProfile extends React.Component {
     this.props.createProfile(this.state);
     if (this.props.profile) {
       this.props.setView('profile', { profileId: this.props.profile });
+    //   this.props.setView('login');
     }
 
   }
