@@ -16,11 +16,10 @@ class Login extends React.Component {
   getUsers() {
     fetch('/api/profile')
       .then(res => res.json())
-      .then(data => {
-        this.setState({
-          users: data
-        });
-      }).catch(err => console.error(err));
+      .then(data => this.setState({
+        users: data
+      }))
+      .catch(err => console.error(err));
 
   }
 
@@ -28,15 +27,16 @@ class Login extends React.Component {
     const index = event.target.selectedIndex;
     const selected = event.target.childNodes[index];
     const id = selected.getAttribute('userId');
-    this.props.createProfile(this.state);
     this.props.addUser({
       user: event.target.value,
       userId: parseInt(id)
     });
 
-    this.props.setView('profile', { profileId: this.state.users[0] });
+    // this.props.setView('profile', { profileId: this.state.users });
+    this.props.setView('profile', {});
 
-    // console.log(this.state.users[0]);
+    // console.log(this.state.users);
+
   }
 
   render() {
