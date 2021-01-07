@@ -12,7 +12,7 @@ export default function EventListItem(props) {
   const end = new Date(props.events.end);
 
   return (
-    <div className="col-10 m-auto event-card" onClick={handleClick}>
+    <div className="col-11 m-auto" onClick={handleClick}>
       <div className="card bg-dark text-white my-3">
         <img className="event-img" src={props.events.resortImage} alt="Card image" />
         <div className="card-img-overlay">

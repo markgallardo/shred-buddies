@@ -12,6 +12,8 @@ import AddEvent from './add-event';
 import EventDetails from './event-details';
 import HostPage from './host-page';
 import Footer from './footer';
+import Login from './log-in';
+// import ProfileTwo from './profile-two';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -19,7 +21,7 @@ export default class App extends React.Component {
     this.state = {
       view: {
 
-        name: 'home',
+        name: 'login',
 
         params: {}
       },
@@ -34,6 +36,13 @@ export default class App extends React.Component {
     this.setUser = this.setUser.bind(this);
     this.createProfile = this.createProfile.bind(this);
     this.createEvent = this.createEvent.bind(this);
+    this.addUser = this.addUser.bind(this);
+  }
+
+  addUser(userName) {
+    this.setState({
+      user: userName
+    });
   }
 
   setUser(user) {
@@ -106,6 +115,7 @@ export default class App extends React.Component {
   }
 
   render() {
+
     let view = <>
 
       <Header setView={this.setView} />
@@ -126,9 +136,12 @@ export default class App extends React.Component {
       view =
         <>
           <Header setView={this.setView} />
-          <Profile setView={this.setView}
+          <Profile
+            setView={this.setView}
             params={this.state.view.params}
-            profile={this.state.user} setUser={this.setUser} />
+            profile={this.state.user}
+            addUser={this.addUser}
+            setUser={this.setUser} />
           <Footer setView={this.setView} />
         </>;
     } else if (this.state.view.name === 'main') {
@@ -195,7 +208,16 @@ export default class App extends React.Component {
           <Footer setView={this.setView} />
         </>;
 
+    } else if (this.state.view.name === 'login') {
+      view =
+        <>
+          <Login setView={this.setView}
+            addUser={this.addUser}
+            createProfile={this.createProfile}
+            params={this.state.view.params} />
+        </>;
     }
+
     return (
       <>
         {view}

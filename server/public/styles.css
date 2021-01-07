@@ -63,24 +63,32 @@ h2 {
   background-size: cover;
 }
 
-
+/*
 .create-header {
+
   font-family: 'Rock Salt', cursive;
    background: #52616b;
    color: #f0f5f9;
    font-size: 40px;
-}
 
-.create-form, .add-event, .event-detail,   .resort-detail, .host, .profile-page{
+} */
+
+.create-form, .add-event, .event-detail,   .resort-detail, .host, .profile-page, .notification{
   background:#c9d6df;
   height: 100vh;
   width: 100%;
    font-family: 'Roboto', sans-serif;
-   padding-top: 20px;
    position: fixed;
 
 
 
+}
+
+.login {
+  background:  #52616b;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
 }
 .main-page {
    background:#c9d6df;
@@ -141,7 +149,7 @@ font-size: 15px;
   filter: brightness(50%);
   box-shadow: 5px 10px;
   object-fit: cover;
-  /* height: 150px; */
+  top: 20;
   width: 100%;
 }
 
@@ -205,11 +213,6 @@ width:350px;
    font-family: 'Roboto', sans-serif;
 } */
 
-.profile-info{
-  background-color: #f0f5f9;
-  box-shadow: 5px 10px;
-}
-
 
 .detail-title {
   font-size: 30px;
@@ -229,11 +232,19 @@ width:350px;
 }
 .nav {
   font-family: 'Roboto', sans-serif;
-    background: #52616b;
+  background: #52616b;
    justify-content: space-around;
    height: 60px;
    align-items: center;
 
+
+}
+.nav-events {
+    border-top:  solid white;
+    position: fixed;
+    z-index:12;
+    width: 100%;
+    background-color: #3d474e
 
 }
 
@@ -242,4 +253,27 @@ width:350px;
 }
 .event-card {
   overflow-y: auto;
+ padding-top: 60px;
+ padding-bottom: 60px;
+}
+
+.pic-box, .name-box, .extra-box {
+  bottom: 10%;
+}
+
+@media only screen and (min-width: 768px) {
+  .pic-box, .name-box, .extra-box {
+  bottom: 5%;
+}
+}
+
+.content-container {
+  height: 80vh;
+ background-color: #f0f5f9;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  bottom:0;
+}
+.description {
+  color: grey;
 }
