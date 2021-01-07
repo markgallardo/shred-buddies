@@ -23,7 +23,7 @@ export default class EventList extends React.Component {
 
   eventList() {
     const list = this.state.events.map(event =>
-      <EventListItem key={event.eventId} events={event} setView={this.props.setView}/>);
+      <EventListItem key={event.eventId} events={event} setView={this.props.setView} />);
 
     return list;
   }
@@ -39,13 +39,18 @@ export default class EventList extends React.Component {
       <div className="main-page">
         <ul className="nav nav-events">
           <li className="nav-item">
-            <a className="nav-link active" href="#" onClick={() => this.props.setView('resortList', {})}>Add Event</a>
+            <a className="nav-link active"
+              href="#"
+              onClick={() => this.props.setView('resortList', {})}>Add Event</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Upcoming Event</a>
+            <a className="nav-link"
+              href="#">Upcoming Event</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#" onClick={() => this.props.setView('host', {})}>Your Event</a>
+            <a className="nav-link"
+              href="#"
+              onClick={() => this.props.setView('host', {})}>Your Event</a>
           </li>
 
         </ul>
