@@ -32,8 +32,8 @@ class Login extends React.Component {
       userId: parseInt(id)
     });
 
-    this.props.setView('profile', { profileId: this.state.users[0] });
-    // this.props.setView('profile', {});
+    // this.props.setView('profile', { profileId: this.state.users });
+    this.props.setView('profile', {});
 
     // console.log(this.state.users);
 

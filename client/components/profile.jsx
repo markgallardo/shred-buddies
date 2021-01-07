@@ -10,7 +10,9 @@ class Profile extends React.Component {
   }
 
   // componentDidMount() {
-  //   this.getUserProfile();
+  //   fetch(`/api/profile/${this.props.params.profileId}`)
+  //     .then(res => res.json())
+  //     .then(data => console.log(data));
   // }
 
   // getUserProfile() {
