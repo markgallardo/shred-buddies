@@ -267,6 +267,11 @@ width:350px;
 }
 }
 
+@media only screen and (min-width: 768px) {
+  .about, .skill, .description {
+    font-size: 30px;
+  }
+}
 .content-container {
   height: 80vh;
  background-color: #f0f5f9;
