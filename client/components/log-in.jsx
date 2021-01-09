@@ -43,7 +43,7 @@ class Login extends React.Component {
       <div className="login col">
         <h2 className="head-title d-flex justify-content-center mt-5 pt-5">Shred Buddies</h2>
         <div className="d-flex justify-content-center align-items-center pt-4">
-          <select className="form-control-lg col-11 mt-3" onChange={this.handleChange} id={this.state.users} >
+          <select className="form-control-lg col-md-7 mt-3" onChange={this.handleChange} id={this.state.users} >
             <option className="col-9">Select User</option>
             {/* <option value="145" userId="1">Mark Gallardo</option>
             <option value="144" userId="2">Jason Gonzales</option> */}

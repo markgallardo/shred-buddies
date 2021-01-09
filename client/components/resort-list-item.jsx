@@ -7,7 +7,7 @@ export default function ResortListItem(props) {
   }
   return (
 
-    <div className="container d-flex border resort-list-item-card my-2 py-3 col-10" onClick={handleClick}>
+    <div className="container d-flex border resort-list-item-card my-2 py-3 col-11 col-lg-9" onClick={handleClick}>
       <img src={props.resorts.imgUrl} alt="" className="img-list" />
       <div className="ml-1">
         <h5>{props.resorts.name}</h5>
