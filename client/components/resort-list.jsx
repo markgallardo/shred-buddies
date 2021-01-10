@@ -8,7 +8,7 @@ export default class ResortList extends React.Component {
       resorts: []
     };
     this.getResorts = this.getResorts.bind(this);
-    this.resortLists = this.resortLists.bind(this);
+    // this.resortLists = this.resortLists.bind(this);
   }
 
   getResorts() {
@@ -18,17 +18,17 @@ export default class ResortList extends React.Component {
       .catch(err => console.error(err));
   }
 
-  resortLists() {
-    const list = this.state.resorts.map(resort =>
-      <ResortListItem key={resort.resortId} setView={this.props.setView} resorts={resort}/>);
+  // resortLists() {
+  //   const list = this.state.resorts.map(resort =>
+  //     <ResortListItem key={resort.resortId} setView={this.props.setView} resorts={resort} />);
 
-    return (
-      <>
-        {list}
-      </>
-    );
+  //   return (
+  //     <>
+  //       {list}
+  //     </>
+  //   );
 
-  }
+  // }
 
   componentDidMount() {
     this.getResorts();
@@ -36,11 +36,16 @@ export default class ResortList extends React.Component {
   }
 
   render() {
+    const list = this.state.resorts.map(resort =>
+      <ResortListItem
+        key={resort.resortId}
+        setView={this.props.setView}
+        resorts={resort} />);
     return (
 
       <div className="resort-list-page">
-        <h4 className="text-center">Resort Lists</h4>
-        {this.resortLists()}
+        <h4 className="text-center">Resort List</h4>
+        <div className="row justify-content-center">{list}</div>
       </div>
 
     );
