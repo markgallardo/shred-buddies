@@ -6,7 +6,7 @@ function Header(props) {
   }
 
   return (
-    <header className="d-flex justify-content-center align-items-center">
+    <header className=" container-fluid d-flex justify-content-center align-items-center">
       <h2 className="head-title" onClick={handleMain}>Shred Buddies</h2>
       {/* <div className="row justify-content-end col-xm-4 col-7 col-md-9 col-lg-10">
         <i className="far header-icon fa-newspaper mr-3" onClick={handleMain}></i>

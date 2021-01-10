@@ -148,7 +148,8 @@ export default class App extends React.Component {
       view =
         <>
           <Header setView={this.setView} />
-          <EventList setView={this.setView}
+          <EventList
+            setView={this.setView}
             event={this.state.user} />
           <Footer setView={this.setView} />
 
@@ -157,7 +158,8 @@ export default class App extends React.Component {
       view =
         <>
           <Header setView={this.setView} />
-          <ResortList setView={this.setView}
+          <ResortList
+            setView={this.setView}
             params={this.state.view.params} />
           <Footer setView={this.setView} />
         </>;
