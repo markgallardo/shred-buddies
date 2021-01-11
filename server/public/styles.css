@@ -87,6 +87,16 @@ h2 {
 
 }
 
+.resort-img {
+  padding-top: 10px;
+}
+@media only screen and (min-width: 730px) {
+  .resort-img {
+   padding-top: 100px;
+
+  }
+}
+
 
 .login {
   background:  #52616b;
@@ -280,12 +290,12 @@ width:350px;
 }
 
 .resort-list-img {
-
   height:280px;
 }
 
 .resort-card {
   width: 350px;
+
 }
 
 .resort-list-page {
