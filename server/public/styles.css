@@ -33,7 +33,6 @@ header {
    font-family: 'Rock Salt', cursive;
   font-weight: bolder;
   color: #f0f5f9;
-  /* text-shadow: 5px 5px 5px #52616b; */
   line-height: 1.6;
   letter-spacing: 2.5px;
   position: fixed;
@@ -68,15 +67,6 @@ h2 {
   background-size: cover;
 }
 
-/*
-.create-header {
-
-  font-family: 'Rock Salt', cursive;
-   background: #52616b;
-   color: #f0f5f9;
-   font-size: 40px;
-
-} */
 
 .create-form, .add-event, .event-detail, .resort-detail, .host, .profile-page, .notification {
   background:#c9d6df;
@@ -182,14 +172,6 @@ font-size: 15px;
 
 }
 
-/* .homepage-overlay {
-  position:fixed;
-  height: 100%;
-  width:100%;
-  background-color:#c9d6df;
-  opacity: 40%;
-  z-index:0;
-} */
 
 .container{
  margin-top: 0;
