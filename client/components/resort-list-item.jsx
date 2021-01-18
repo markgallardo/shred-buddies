@@ -15,7 +15,7 @@ export default function ResortListItem(props) {
   //   </div>
   // </div>
 
-    <div className="card resort-card mb-3 mx-xl-2 mb-xl-5"
+    <div className="card resort-card mb-3 mx-lg-2 mb-xl-5"
       onClick={handleClick} >
       <img className="card-img-top resort-list-img rounded-top" src={props.resorts.imgUrl} alt="Card image cap" />
       <div className="card-body py-2">
