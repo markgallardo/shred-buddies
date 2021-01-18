@@ -38,9 +38,9 @@ export default class RecommendedResortDetail extends React.Component {
           <div className="mb-md-3 p-2 mx-2">
             <h4><i className="fas fa-chevron-left py-md-3"
               onClick={() => this.props.setView('resortList', {})}></i> {this.state.resort.name}</h4>
-            <p className="mt-n1"> {this.state.resort.address}</p>
+            <p className="mt-n1 mx-2">{this.state.resort.address}</p>
           </div>
-          <div className="mx-2 mt-n3">
+          <div className="mx-3 mx-lg-4 mt-n3">
             <p>{this.state.resort.description}</p>
           </div>
           <div className="m-auto resort-img">
