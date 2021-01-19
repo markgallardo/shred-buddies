@@ -21,7 +21,7 @@ export default class App extends React.Component {
     this.state = {
       view: {
 
-        name: 'main',
+        name: 'home',
 
         params: {}
       },

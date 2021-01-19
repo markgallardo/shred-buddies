@@ -56,29 +56,49 @@ export default class AddEvent extends React.Component {
     return (
       <div className="add-event">
         <form className="mx-3">
-          <div className="form-group">
-            <label htmlFor="exampleFormControlInput1"><h3 className="mt-2">Add Event</h3></label>
+          <div className="form-group col-md-9 mx-auto">
+            <label htmlFor="exampleFormControlInput1">
+              <h3 className="mt-2">Add Event</h3>
+            </label>
             {/* <input onChange={this.handleChange} value={this.props.params.resortId}>{this.props.params.resortId}</input> */}
-            <select className="ml-4" onChange ={this.handleChange} id={this.state.resortId} name="resortId" >
+            <select
+              className="ml-4"
+              onChange={this.handleChange}
+              id={this.state.resortId}
+              name="resortId" >
               <option> select mountain</option>
               <option value="1">mammoth</option>
               <option value="2">bear mountain</option>
               <option value="3">mountain high</option>
             </select>
           </div>
-          <div className="d-flex">
+          <div className="d-flex col-md-9 mx-auto">
             <div className="form-group">
               <label>start date</label>
-              <input onChange ={this.handleChange} value={this.state.startDate} name="startDate" type="date" className="form-control start-input" id="start-id" />
+              <input
+                onChange={this.handleChange}
+                value={this.state.startDate}
+                name="startDate" type="date"
+                className="form-control start-input"
+                id="start-id" />
             </div>
-            <div className="">
+            <div className="form-group">
               <label>end date</label>
-              <input onChange ={this.handleChange} value ={this.state.endDate} name="endDate" type="date" className="form-control end-input" id="end-id" />
+              <input
+                onChange={this.handleChange}
+                value={this.state.endDate}
+                name="endDate" type="date"
+                className="form-control end-input"
+                id="end-id" />
             </div>
           </div>
-          <div className="form-group mt-2">
+          <div className="form-group mt-2 col-md-9 mx-auto">
             <label htmlFor="exampleFormControlSelect1">how many shredders</label>
-            <select onChange ={this.handleChange} value={this.state.profileId} name= "profileId" className="form-control" id="exampleFormControlSelect1">
+            <select
+              onChange={this.handleChange}
+              value={this.state.profileId} name="profileId"
+              className="form-control"
+              id="exampleFormControlSelect1">
               <option>1</option>
               <option>2</option>
               <option>3</option>
@@ -91,12 +111,20 @@ export default class AddEvent extends React.Component {
               <option>10</option>
             </select>
           </div>
-          <div className="form-group">
+          <div className="form-group col-md-9 mx-auto">
             <label htmlFor="exampleFormControlTextarea1">event details</label>
-            <textarea onChange={this.handleChange} value={this.state.description} name="description" className="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+            <textarea
+              onChange={this.handleChange}
+              value={this.state.description}
+              name="description"
+              className="form-control"
+              id="exampleFormControlTextarea1"
+              rows="5"></textarea>
           </div>
           <div className="text-center">
-            <button onClick={this.handleClick} className="btn-detail m-auto">add event</button>
+            <button
+              onClick={this.handleClick}
+              className="btn-detail m-auto">add event</button>
           </div>
         </form>
       </div>
