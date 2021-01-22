@@ -6,24 +6,23 @@ class Profile extends React.Component {
     this.state = {
       profile: {}
     };
-    // this.getUserProfile = this.getUserProfile.bind(this);
+    this.getUserProfile = this.getUserProfile.bind(this);
   }
 
-  componentDidMount() {
+  getUserProfile() {
     fetch(`/api/profile/${this.props.params.profileId}`)
       .then(res => res.json())
       .then(data =>
-        this.setState({
-          profile: data
+        this.setState(state => {
+          this.props.addUser(data);
+          return ({ profile: data });
         }))
       .catch(err => console.error(err));
   }
 
-  // getUserProfile() {
-  //   fetch(`/api/profile/${this.props.params.profileId}`)
-  //     .then(res => res.json())
-  //     .then(data => console.log(data));
-  // }
+  componentDidMount() {
+    this.getUserProfile();
+  }
 
   render() {
 

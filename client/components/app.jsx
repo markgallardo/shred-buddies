@@ -22,7 +22,6 @@ export default class App extends React.Component {
       view: {
 
         name: 'home',
-
         params: {}
       },
       profile: null,
@@ -76,13 +75,23 @@ export default class App extends React.Component {
     fetch('/api/profile', requestOption)
       .then(result => result.json())
       .then(data => this.setState({
-        view: { name: 'login', params: {} },
+        view: { name: 'profile', params: {} },
         profile: data.profileId,
         user: data
 
       }))
       .catch(err => console.error(err));
   }
+
+  // getUserProfile() {
+  //   fetch(`/api/profile/${this.props.params.profileId}`)
+  //     .then(res => res.json())
+  //     .then(data =>
+  //       this.setState({
+  //         profile: data
+  //       }))
+  //     .catch(err => console.error(err));
+  // }
 
   createEvent(object) {
     const requestOption = {
@@ -141,7 +150,8 @@ export default class App extends React.Component {
             params={this.state.view.params}
             profile={this.state.user}
             addUser={this.addUser}
-            setUser={this.setUser} />
+            setUser={this.setUser}
+            getUserProfile={this.getUserProfile}/>
           <Footer setView={this.setView} />
         </>;
     } else if (this.state.view.name === 'main') {
