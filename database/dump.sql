@@ -213,6 +213,9 @@ COPY public.event ("eventId", description, "resortId", "profileId", "startDate",
 166	2020 has been a crazy year!	1	5	2020-12-29	2021-01-01
 167	lol	2	3	2020-12-14	2020-12-18
 168	what is going on	3	10	2021-01-04	2021-01-07
+169	lets go boarding asap pleaaaaase	1	5	2021-01-22	2021-01-23
+170	lets go boarding asap pleaaaaase	1	5	2021-01-22	2021-01-23
+171	lets go boarding asap pleaaaaase	1	5	2021-01-22	2021-01-23
 \.
 
 
@@ -246,7 +249,7 @@ COPY public.resort ("resortId", name, address, description, "imgUrl") FROM stdin
 -- Name: event_eventId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."event_eventId_seq"', 168, true);
+SELECT pg_catalog.setval('public."event_eventId_seq"', 171, true);
 
 
 --
