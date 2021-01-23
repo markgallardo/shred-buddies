@@ -1,4 +1,3 @@
-
 import React from 'react';
 import EventList from './event-list';
 import Header from './header';
@@ -75,9 +74,7 @@ export default class App extends React.Component {
     fetch('/api/profile', requestOption)
       .then(result => result.json())
       .then(data => this.setState({
-        view: { name: 'profile', params: {} },
-        profile: data.profileId,
-        user: data
+        view: { name: 'login', params: {} }
 
       }))
       .catch(err => console.error(err));
@@ -148,7 +145,7 @@ export default class App extends React.Component {
           <Profile
             setView={this.setView}
             params={this.state.view.params}
-            profile={this.state.user}
+            profile={this.state.profile}
             addUser={this.addUser}
             setUser={this.setUser}
             getUserProfile={this.getUserProfile}/>
