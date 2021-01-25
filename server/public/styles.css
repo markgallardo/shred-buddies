@@ -87,6 +87,12 @@ h2 {
   }
 }
 
+@media only screen and (max-width: 375px) {
+  .resort-img img {
+   max-height:200px;
+  }
+}
+
 
 .login {
   background:  #52616b;
