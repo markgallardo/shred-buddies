@@ -39,7 +39,7 @@ class Profile extends React.Component {
                 <h2 className="m-auto text-center">{name}</h2>
                 <p className="email text-center">{email}</p>
               </div>
-              <div className="extra-box pt-3 col-11 m-auto position-relative col-lg-9">
+              <div className="extra-box pt-3 col-11 m-auto position-relative col-lg-7">
                 <h5 className="skill">Skill Level : {skill}</h5>
                 <div>
                   <h5 className="pt-2 about">About</h5>
