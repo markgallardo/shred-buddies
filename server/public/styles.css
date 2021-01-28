@@ -98,6 +98,10 @@ h2 {
    padding-top: 60px;
 
   }
+
+  .resort-detail {
+    height: 800px;
+  }
 }
 
 @media only screen and (max-width: 375px) {
@@ -276,7 +280,7 @@ width:350px;
 
 @media only screen and (min-width: 768px) {
   .about, .skill, .description {
-    font-size: 30px;
+    font-size: 20px;
   }
 }
 .content-container {
