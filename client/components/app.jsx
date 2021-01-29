@@ -12,7 +12,6 @@ import EventDetails from './event-details';
 import HostPage from './host-page';
 import Footer from './footer';
 import Login from './log-in';
-// import ProfileTwo from './profile-two';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -79,16 +78,6 @@ export default class App extends React.Component {
       }))
       .catch(err => console.error(err));
   }
-
-  // getUserProfile() {
-  //   fetch(`/api/profile/${this.props.params.profileId}`)
-  //     .then(res => res.json())
-  //     .then(data =>
-  //       this.setState({
-  //         profile: data
-  //       }))
-  //     .catch(err => console.error(err));
-  // }
 
   createEvent(object) {
     const requestOption = {

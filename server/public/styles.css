@@ -87,6 +87,7 @@ h2 {
 
 .profile-page, .resort-detail{
  font-family: 'Roboto', sans-serif;
+ height: 100vh;
 }
 
 
@@ -290,7 +291,7 @@ width:350px;
   border-top-right-radius: 0.8rem;
   bottom:0;
 }
-.description {
+.description, .level{
   color: grey;
 }
 
