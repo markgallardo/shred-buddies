@@ -275,7 +275,8 @@ width:350px;
 
 @media only screen and (min-width: 768px) {
   .pic-box, .name-box, .extra-box {
-  bottom: 5%;
+  bottom: 7%;
+  
 }
 }
 
@@ -285,7 +286,7 @@ width:350px;
   }
 }
 .content-container {
-  height: 80vh;
+  height: 85vh;
  background-color: #f0f5f9;
   border-top-left-radius: 0.8rem;
   border-top-right-radius: 0.8rem;
