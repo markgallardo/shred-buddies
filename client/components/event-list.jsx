@@ -33,7 +33,6 @@ export default class EventList extends React.Component {
   }
 
   render() {
-
     return (
 
       <div className="main-page">

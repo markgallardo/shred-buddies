@@ -34,6 +34,7 @@ export default class App extends React.Component {
     this.createProfile = this.createProfile.bind(this);
     this.createEvent = this.createEvent.bind(this);
     this.addUser = this.addUser.bind(this);
+
   }
 
   addUser(userName) {
