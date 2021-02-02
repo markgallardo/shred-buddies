@@ -1,4 +1,3 @@
-
 import React from 'react';
 import EventList from './event-list';
 import Header from './header';
@@ -13,17 +12,13 @@ import EventDetails from './event-details';
 import HostPage from './host-page';
 import Footer from './footer';
 import Login from './log-in';
-// import ProfileTwo from './profile-two';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       view: {
-
-
-        name: 'resortList',
-
+       name: 'home',
 
         params: {}
       },
@@ -39,6 +34,7 @@ export default class App extends React.Component {
     this.createProfile = this.createProfile.bind(this);
     this.createEvent = this.createEvent.bind(this);
     this.addUser = this.addUser.bind(this);
+
   }
 
   addUser(userName) {
@@ -78,9 +74,7 @@ export default class App extends React.Component {
     fetch('/api/profile', requestOption)
       .then(result => result.json())
       .then(data => this.setState({
-        view: { name: 'login', params: {} },
-        profile: data.profileId,
-        user: data
+        view: { name: 'login', params: {} }
 
       }))
       .catch(err => console.error(err));
@@ -141,9 +135,10 @@ export default class App extends React.Component {
           <Profile
             setView={this.setView}
             params={this.state.view.params}
-            profile={this.state.user}
+            profile={this.state.profile}
             addUser={this.addUser}
-            setUser={this.setUser} />
+            setUser={this.setUser}
+            getUserProfile={this.getUserProfile}/>
           <Footer setView={this.setView} />
         </>;
     } else if (this.state.view.name === 'main') {

@@ -21,7 +21,7 @@ header {
 }
 
 .head-title {
-  font-family: 'Rock Salt', cursive;
+ font-family: 'Bungee Shade', cursive;
   font-weight: bolder;
   color: #f0f5f9;
   text-shadow: 5px 5px 5px #52616b;
@@ -29,11 +29,18 @@ header {
   letter-spacing: 2.5px;
 
 }
+
+@media only screen and (max-width: 376px) {
+  .head-title {
+    font-size: 25px;
+  }
+}
+
+
 .home-title {
-   font-family: 'Rock Salt', cursive;
+  font-family: 'Bungee Shade', cursive;
   font-weight: bolder;
   color: #f0f5f9;
-  /* text-shadow: 5px 5px 5px #52616b; */
   line-height: 1.6;
   letter-spacing: 2.5px;
   position: fixed;
@@ -68,17 +75,8 @@ h2 {
   background-size: cover;
 }
 
-/*
-.create-header {
 
-  font-family: 'Rock Salt', cursive;
-   background: #52616b;
-   color: #f0f5f9;
-   font-size: 40px;
-
-} */
-
-.create-form, .add-event, .event-detail, .resort-detail, .host, .profile-page, .notification {
+.create-form, .add-event, .event-detail, .host, .notification {
   background:#c9d6df;
   height: 100vh;
   width: 100%;
@@ -87,13 +85,29 @@ h2 {
 
 }
 
+.profile-page, .resort-detail{
+ font-family: 'Roboto', sans-serif;
+ height: 100vh;
+}
+
+
 .resort-img {
   padding-top: 10px;
 }
 @media only screen and (min-width: 730px) {
   .resort-img {
-   padding-top: 100px;
+   padding-top: 60px;
 
+  }
+
+  .resort-detail {
+    height: 800px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .resort-img img {
+   max-height:200px;
   }
 }
 
@@ -164,7 +178,7 @@ font-size: 15px;
 }
 
 .start-input, .end-input {
-  width:170px;
+  width:155px;
 }
 
 
@@ -182,14 +196,6 @@ font-size: 15px;
 
 }
 
-/* .homepage-overlay {
-  position:fixed;
-  height: 100%;
-  width:100%;
-  background-color:#c9d6df;
-  opacity: 40%;
-  z-index:0;
-} */
 
 .container{
  margin-top: 0;
@@ -269,23 +275,24 @@ width:350px;
 
 @media only screen and (min-width: 768px) {
   .pic-box, .name-box, .extra-box {
-  bottom: 5%;
+  bottom: 7%;
+  
 }
 }
 
 @media only screen and (min-width: 768px) {
   .about, .skill, .description {
-    font-size: 30px;
+    font-size: 20px;
   }
 }
 .content-container {
-  height: 80vh;
+  height: 85vh;
  background-color: #f0f5f9;
   border-top-left-radius: 0.8rem;
   border-top-right-radius: 0.8rem;
   bottom:0;
 }
-.description {
+.description, .level{
   color: grey;
 }
 
